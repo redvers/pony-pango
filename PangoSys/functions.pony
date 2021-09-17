@@ -1,3 +1,8 @@
+use "lib:pango-1.0"
+use "lib:gobject-2.0"
+use "lib:glib-2.0"
+use "lib:harfbuzz"
+
 primitive PangoSys
 
 

@@ -1,4 +1,4 @@
-use "../../pony-cairo/CairoSys"
+use "CairoSys"
 
 /*
   Source: /nix/store/2f29irshp97xgay5dk5vn0yih26j7bm9-harfbuzz-2.8.2-dev/include/harfbuzz/hb-common.h:299
