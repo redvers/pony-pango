@@ -1,0 +1,4546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./renderuse.xml"/>
+<xi:include href="./usetypes.xml"/>
+<xi:include href="./gtk4.xml"/>
+                    <uses>
+                      <use id="_8897" name="pango_coverage_get_type"
+     ponyname="pango_coverage_get_type"
+     fid="f322"
+     lineno="71"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_8898" name="pango_coverage_new"
+     ponyname="pango_coverage_new"
+     fid="f322"
+     lineno="74"
+     rv="NullablePointer[PangoCoverage]">
+     <useargs/>
+  </use>
+  <use id="_8899" name="pango_coverage_ref"
+     ponyname="pango_coverage_ref"
+     fid="f322"
+     lineno="76"
+     rv="NullablePointer[PangoCoverage]">
+     <useargs>
+       <usearg name="coverage" type="NullablePointer[PangoCoverage]"/>
+     </useargs>
+  </use>
+  <use id="_8900" name="pango_coverage_unref"
+     ponyname="pango_coverage_unref"
+     fid="f322"
+     lineno="78"
+     rv="None">
+     <useargs>
+       <usearg name="coverage" type="NullablePointer[PangoCoverage]"/>
+     </useargs>
+  </use>
+  <use id="_8901" name="pango_coverage_copy"
+     ponyname="pango_coverage_copy"
+     fid="f322"
+     lineno="80"
+     rv="NullablePointer[PangoCoverage]">
+     <useargs>
+       <usearg name="coverage" type="NullablePointer[PangoCoverage]"/>
+     </useargs>
+  </use>
+  <use id="_8902" name="pango_coverage_get"
+     ponyname="pango_coverage_get"
+     fid="f322"
+     lineno="82"
+     rv="I32">
+     <useargs>
+       <usearg name="coverage" type="NullablePointer[PangoCoverage]"/>
+       <usearg name="index" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8903" name="pango_coverage_set"
+     ponyname="pango_coverage_set"
+     fid="f322"
+     lineno="85"
+     rv="None">
+     <useargs>
+       <usearg name="coverage" type="NullablePointer[PangoCoverage]"/>
+       <usearg name="index" type="I32"/>
+       <usearg name="level" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8904" name="pango_coverage_max"
+     ponyname="pango_coverage_max"
+     fid="f322"
+     lineno="89"
+     rv="None">
+     <useargs>
+       <usearg name="coverage" type="NullablePointer[PangoCoverage]"/>
+       <usearg name="other" type="NullablePointer[PangoCoverage]"/>
+     </useargs>
+  </use>
+  <use id="_8905" name="pango_coverage_to_bytes"
+     ponyname="pango_coverage_to_bytes"
+     fid="f322"
+     lineno="93"
+     rv="None">
+     <useargs>
+       <usearg name="coverage" type="NullablePointer[PangoCoverage]"/>
+       <usearg name="bytes" type="NullablePointer[Pointer[U8]]"/>
+       <usearg name="nbytes" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_8906" name="pango_coverage_from_bytes"
+     ponyname="pango_coverage_from_bytes"
+     fid="f322"
+     lineno="97"
+     rv="NullablePointer[PangoCoverage]">
+     <useargs>
+       <usearg name="bytes" type="Pointer[U8]"/>
+       <usearg name="nbytes" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9189" name="pango_break"
+     ponyname="pango_break"
+     fid="f323"
+     lineno="97"
+     rv="None">
+     <useargs>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="analysis" type="NullablePointer[PangoAnalysis]"/>
+       <usearg name="attrs" type="NullablePointer[PangoLogAttr]"/>
+       <usearg name="attrslen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9190" name="pango_find_paragraph_boundary"
+     ponyname="pango_find_paragraph_boundary"
+     fid="f323"
+     lineno="104"
+     rv="None">
+     <useargs>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="paragraphdelimiterindex" type="Pointer[I32]"/>
+       <usearg name="nextparagraphstart" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9191" name="pango_get_log_attrs"
+     ponyname="pango_get_log_attrs"
+     fid="f323"
+     lineno="110"
+     rv="None">
+     <useargs>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="level" type="I32"/>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+       <usearg name="logattrs" type="NullablePointer[PangoLogAttr]"/>
+       <usearg name="attrslen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9192" name="pango_default_break"
+     ponyname="pango_default_break"
+     fid="f323"
+     lineno="123"
+     rv="None">
+     <useargs>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="analysis" type="NullablePointer[PangoAnalysis]"/>
+       <usearg name="attrs" type="NullablePointer[PangoLogAttr]"/>
+       <usearg name="attrslen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9193" name="pango_tailor_break"
+     ponyname="pango_tailor_break"
+     fid="f323"
+     lineno="130"
+     rv="None">
+     <useargs>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="analysis" type="NullablePointer[PangoAnalysis]"/>
+       <usearg name="offset" type="I32"/>
+       <usearg name="logattrs" type="NullablePointer[PangoLogAttr]"/>
+       <usearg name="logattrslen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8920" name="pango_units_from_double"
+     ponyname="pango_units_from_double"
+     fid="f324"
+     lineno="122"
+     rv="I32">
+     <useargs>
+       <usearg name="d" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8921" name="pango_units_to_double"
+     ponyname="pango_units_to_double"
+     fid="f324"
+     lineno="124"
+     rv="F64">
+     <useargs>
+       <usearg name="i" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8922" name="pango_extents_to_pixels"
+     ponyname="pango_extents_to_pixels"
+     fid="f324"
+     lineno="195"
+     rv="None">
+     <useargs>
+       <usearg name="inclusive" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="nearest" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9282" name="pango_engine_get_type"
+     ponyname="pango_engine_get_type"
+     fid="f325"
+     lineno="88"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9285" name="pango_engine_lang_get_type"
+     ponyname="pango_engine_lang_get_type"
+     fid="f325"
+     lineno="155"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9288" name="pango_engine_shape_get_type"
+     ponyname="pango_engine_shape_get_type"
+     fid="f325"
+     lineno="243"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9293" name="script_engine_list"
+     ponyname="script_engine_list"
+     fid="f325"
+     lineno="305"
+     rv="None">
+     <useargs>
+       <usearg name="engines" type="NullablePointer[NullablePointer[PangoEngineInfo]]"/>
+       <usearg name="nengines" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9294" name="script_engine_init"
+     ponyname="script_engine_init"
+     fid="f325"
+     lineno="318"
+     rv="None">
+     <useargs>
+       <usearg name="module" type="NullablePointer[GTypeModule]"/>
+     </useargs>
+  </use>
+  <use id="_9295" name="script_engine_exit"
+     ponyname="script_engine_exit"
+     fid="f325"
+     lineno="329"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_9296" name="script_engine_create"
+     ponyname="script_engine_create"
+     fid="f325"
+     lineno="340"
+     rv="NullablePointer[PangoEngine]">
+     <useargs>
+       <usearg name="id" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8990" name="pango_font_description_get_type"
+     ponyname="pango_font_description_get_type"
+     fid="f326"
+     lineno="223"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_8991" name="pango_font_description_new"
+     ponyname="pango_font_description_new"
+     fid="f326"
+     lineno="225"
+     rv="NullablePointer[PangoFontDescription]">
+     <useargs/>
+  </use>
+  <use id="_8992" name="pango_font_description_copy"
+     ponyname="pango_font_description_copy"
+     fid="f326"
+     lineno="227"
+     rv="NullablePointer[PangoFontDescription]">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_8993" name="pango_font_description_copy_static"
+     ponyname="pango_font_description_copy_static"
+     fid="f326"
+     lineno="229"
+     rv="NullablePointer[PangoFontDescription]">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_8994" name="pango_font_description_hash"
+     ponyname="pango_font_description_hash"
+     fid="f326"
+     lineno="231"
+     rv="U32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_8995" name="pango_font_description_equal"
+     ponyname="pango_font_description_equal"
+     fid="f326"
+     lineno="233"
+     rv="I32">
+     <useargs>
+       <usearg name="desc1" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="desc2" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_8996" name="pango_font_description_free"
+     ponyname="pango_font_description_free"
+     fid="f326"
+     lineno="236"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_8997" name="pango_font_descriptions_free"
+     ponyname="pango_font_descriptions_free"
+     fid="f326"
+     lineno="238"
+     rv="None">
+     <useargs>
+       <usearg name="descs" type="NullablePointer[NullablePointer[PangoFontDescription]]"/>
+       <usearg name="ndescs" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8998" name="pango_font_description_set_family"
+     ponyname="pango_font_description_set_family"
+     fid="f326"
+     lineno="242"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="family" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8999" name="pango_font_description_set_family_static"
+     ponyname="pango_font_description_set_family_static"
+     fid="f326"
+     lineno="245"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="family" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9000" name="pango_font_description_get_family"
+     ponyname="pango_font_description_get_family"
+     fid="f326"
+     lineno="248"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9001" name="pango_font_description_set_style"
+     ponyname="pango_font_description_set_style"
+     fid="f326"
+     lineno="250"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="style" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9002" name="pango_font_description_get_style"
+     ponyname="pango_font_description_get_style"
+     fid="f326"
+     lineno="253"
+     rv="I32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9003" name="pango_font_description_set_variant"
+     ponyname="pango_font_description_set_variant"
+     fid="f326"
+     lineno="255"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="variant" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9004" name="pango_font_description_get_variant"
+     ponyname="pango_font_description_get_variant"
+     fid="f326"
+     lineno="258"
+     rv="I32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9005" name="pango_font_description_set_weight"
+     ponyname="pango_font_description_set_weight"
+     fid="f326"
+     lineno="260"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="weight" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9006" name="pango_font_description_get_weight"
+     ponyname="pango_font_description_get_weight"
+     fid="f326"
+     lineno="263"
+     rv="I32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9007" name="pango_font_description_set_stretch"
+     ponyname="pango_font_description_set_stretch"
+     fid="f326"
+     lineno="265"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="stretch" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9008" name="pango_font_description_get_stretch"
+     ponyname="pango_font_description_get_stretch"
+     fid="f326"
+     lineno="268"
+     rv="I32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9009" name="pango_font_description_set_size"
+     ponyname="pango_font_description_set_size"
+     fid="f326"
+     lineno="270"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="size" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9010" name="pango_font_description_get_size"
+     ponyname="pango_font_description_get_size"
+     fid="f326"
+     lineno="273"
+     rv="I32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9011" name="pango_font_description_set_absolute_size"
+     ponyname="pango_font_description_set_absolute_size"
+     fid="f326"
+     lineno="275"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="size" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_9012" name="pango_font_description_get_size_is_absolute"
+     ponyname="pango_font_description_get_size_is_absolute"
+     fid="f326"
+     lineno="278"
+     rv="I32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9013" name="pango_font_description_set_gravity"
+     ponyname="pango_font_description_set_gravity"
+     fid="f326"
+     lineno="280"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="gravity" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9014" name="pango_font_description_get_gravity"
+     ponyname="pango_font_description_get_gravity"
+     fid="f326"
+     lineno="283"
+     rv="I32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9015" name="pango_font_description_set_variations_static"
+     ponyname="pango_font_description_set_variations_static"
+     fid="f326"
+     lineno="286"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="variations" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9016" name="pango_font_description_set_variations"
+     ponyname="pango_font_description_set_variations"
+     fid="f326"
+     lineno="289"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="variations" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9017" name="pango_font_description_get_variations"
+     ponyname="pango_font_description_get_variations"
+     fid="f326"
+     lineno="292"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9018" name="pango_font_description_get_set_fields"
+     ponyname="pango_font_description_get_set_fields"
+     fid="f326"
+     lineno="295"
+     rv="I32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9019" name="pango_font_description_unset_fields"
+     ponyname="pango_font_description_unset_fields"
+     fid="f326"
+     lineno="297"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="tounset" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9020" name="pango_font_description_merge"
+     ponyname="pango_font_description_merge"
+     fid="f326"
+     lineno="301"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="desctomerge" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="replaceexisting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9021" name="pango_font_description_merge_static"
+     ponyname="pango_font_description_merge_static"
+     fid="f326"
+     lineno="305"
+     rv="None">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="desctomerge" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="replaceexisting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9022" name="pango_font_description_better_match"
+     ponyname="pango_font_description_better_match"
+     fid="f326"
+     lineno="310"
+     rv="I32">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="oldmatch" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="newmatch" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9023" name="pango_font_description_from_string"
+     ponyname="pango_font_description_from_string"
+     fid="f326"
+     lineno="315"
+     rv="NullablePointer[PangoFontDescription]">
+     <useargs>
+       <usearg name="str" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9024" name="pango_font_description_to_string"
+     ponyname="pango_font_description_to_string"
+     fid="f326"
+     lineno="317"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9025" name="pango_font_description_to_filename"
+     ponyname="pango_font_description_to_filename"
+     fid="f326"
+     lineno="319"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9026" name="pango_font_metrics_get_type"
+     ponyname="pango_font_metrics_get_type"
+     fid="f326"
+     lineno="344"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9027" name="pango_font_metrics_ref"
+     ponyname="pango_font_metrics_ref"
+     fid="f326"
+     lineno="346"
+     rv="NullablePointer[PangoFontMetrics]">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9028" name="pango_font_metrics_unref"
+     ponyname="pango_font_metrics_unref"
+     fid="f326"
+     lineno="348"
+     rv="None">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9029" name="pango_font_metrics_get_ascent"
+     ponyname="pango_font_metrics_get_ascent"
+     fid="f326"
+     lineno="350"
+     rv="I32">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9030" name="pango_font_metrics_get_descent"
+     ponyname="pango_font_metrics_get_descent"
+     fid="f326"
+     lineno="352"
+     rv="I32">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9031" name="pango_font_metrics_get_height"
+     ponyname="pango_font_metrics_get_height"
+     fid="f326"
+     lineno="354"
+     rv="I32">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9032" name="pango_font_metrics_get_approximate_char_width"
+     ponyname="pango_font_metrics_get_approximate_char_width"
+     fid="f326"
+     lineno="356"
+     rv="I32">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9033" name="pango_font_metrics_get_approximate_digit_width"
+     ponyname="pango_font_metrics_get_approximate_digit_width"
+     fid="f326"
+     lineno="358"
+     rv="I32">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9034" name="pango_font_metrics_get_underline_position"
+     ponyname="pango_font_metrics_get_underline_position"
+     fid="f326"
+     lineno="360"
+     rv="I32">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9035" name="pango_font_metrics_get_underline_thickness"
+     ponyname="pango_font_metrics_get_underline_thickness"
+     fid="f326"
+     lineno="362"
+     rv="I32">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9036" name="pango_font_metrics_get_strikethrough_position"
+     ponyname="pango_font_metrics_get_strikethrough_position"
+     fid="f326"
+     lineno="364"
+     rv="I32">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9037" name="pango_font_metrics_get_strikethrough_thickness"
+     ponyname="pango_font_metrics_get_strikethrough_thickness"
+     fid="f326"
+     lineno="366"
+     rv="I32">
+     <useargs>
+       <usearg name="metrics" type="NullablePointer[PangoFontMetrics]"/>
+     </useargs>
+  </use>
+  <use id="_9044" name="pango_font_family_get_type"
+     ponyname="pango_font_family_get_type"
+     fid="f326"
+     lineno="426"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9045" name="pango_font_family_list_faces"
+     ponyname="pango_font_family_list_faces"
+     fid="f326"
+     lineno="429"
+     rv="None">
+     <useargs>
+       <usearg name="family" type="NullablePointer[PangoFontFamily]"/>
+       <usearg name="faces" type="NullablePointer[NullablePointer[NullablePointer[PangoFontFace]]]"/>
+       <usearg name="nfaces" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9046" name="pango_font_family_get_name"
+     ponyname="pango_font_family_get_name"
+     fid="f326"
+     lineno="433"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="family" type="NullablePointer[PangoFontFamily]"/>
+     </useargs>
+  </use>
+  <use id="_9047" name="pango_font_family_is_monospace"
+     ponyname="pango_font_family_is_monospace"
+     fid="f326"
+     lineno="435"
+     rv="I32">
+     <useargs>
+       <usearg name="family" type="NullablePointer[PangoFontFamily]"/>
+     </useargs>
+  </use>
+  <use id="_9048" name="pango_font_family_is_variable"
+     ponyname="pango_font_family_is_variable"
+     fid="f326"
+     lineno="437"
+     rv="I32">
+     <useargs>
+       <usearg name="family" type="NullablePointer[PangoFontFamily]"/>
+     </useargs>
+  </use>
+  <use id="_9049" name="pango_font_family_get_face"
+     ponyname="pango_font_family_get_face"
+     fid="f326"
+     lineno="440"
+     rv="NullablePointer[PangoFontFace]">
+     <useargs>
+       <usearg name="family" type="NullablePointer[PangoFontFamily]"/>
+       <usearg name="name" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9052" name="pango_font_face_get_type"
+     ponyname="pango_font_face_get_type"
+     fid="f326"
+     lineno="494"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9053" name="pango_font_face_describe"
+     ponyname="pango_font_face_describe"
+     fid="f326"
+     lineno="497"
+     rv="NullablePointer[PangoFontDescription]">
+     <useargs>
+       <usearg name="face" type="NullablePointer[PangoFontFace]"/>
+     </useargs>
+  </use>
+  <use id="_9054" name="pango_font_face_get_face_name"
+     ponyname="pango_font_face_get_face_name"
+     fid="f326"
+     lineno="499"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="face" type="NullablePointer[PangoFontFace]"/>
+     </useargs>
+  </use>
+  <use id="_9055" name="pango_font_face_list_sizes"
+     ponyname="pango_font_face_list_sizes"
+     fid="f326"
+     lineno="501"
+     rv="None">
+     <useargs>
+       <usearg name="face" type="NullablePointer[PangoFontFace]"/>
+       <usearg name="sizes" type="NullablePointer[Pointer[I32]]"/>
+       <usearg name="nsizes" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9056" name="pango_font_face_is_synthesized"
+     ponyname="pango_font_face_is_synthesized"
+     fid="f326"
+     lineno="505"
+     rv="I32">
+     <useargs>
+       <usearg name="face" type="NullablePointer[PangoFontFace]"/>
+     </useargs>
+  </use>
+  <use id="_9057" name="pango_font_face_get_family"
+     ponyname="pango_font_face_get_family"
+     fid="f326"
+     lineno="508"
+     rv="NullablePointer[PangoFontFamily]">
+     <useargs>
+       <usearg name="face" type="NullablePointer[PangoFontFace]"/>
+     </useargs>
+  </use>
+  <use id="_9060" name="pango_font_get_type"
+     ponyname="pango_font_get_type"
+     fid="f326"
+     lineno="564"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9061" name="pango_font_describe"
+     ponyname="pango_font_describe"
+     fid="f326"
+     lineno="567"
+     rv="NullablePointer[PangoFontDescription]">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+     </useargs>
+  </use>
+  <use id="_9062" name="pango_font_describe_with_absolute_size"
+     ponyname="pango_font_describe_with_absolute_size"
+     fid="f326"
+     lineno="569"
+     rv="NullablePointer[PangoFontDescription]">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+     </useargs>
+  </use>
+  <use id="_9063" name="pango_font_get_coverage"
+     ponyname="pango_font_get_coverage"
+     fid="f326"
+     lineno="571"
+     rv="NullablePointer[PangoCoverage]">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_9064" name="pango_font_find_shaper"
+     ponyname="pango_font_find_shaper"
+     fid="f326"
+     lineno="575"
+     rv="NullablePointer[PangoEngineShape]">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+       <usearg name="ch" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_9065" name="pango_font_get_metrics"
+     ponyname="pango_font_get_metrics"
+     fid="f326"
+     lineno="580"
+     rv="NullablePointer[PangoFontMetrics]">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_9066" name="pango_font_get_glyph_extents"
+     ponyname="pango_font_get_glyph_extents"
+     fid="f326"
+     lineno="583"
+     rv="None">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="glyph" type="U32"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9067" name="pango_font_get_font_map"
+     ponyname="pango_font_get_font_map"
+     fid="f326"
+     lineno="588"
+     rv="NullablePointer[PangoFontMap]">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+     </useargs>
+  </use>
+  <use id="_9068" name="pango_font_get_face"
+     ponyname="pango_font_get_face"
+     fid="f326"
+     lineno="591"
+     rv="NullablePointer[PangoFontFace]">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+     </useargs>
+  </use>
+  <use id="_9069" name="pango_font_has_char"
+     ponyname="pango_font_has_char"
+     fid="f326"
+     lineno="594"
+     rv="I32">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="wc" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_9070" name="pango_font_get_features"
+     ponyname="pango_font_get_features"
+     fid="f326"
+     lineno="597"
+     rv="None">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="features" type="NullablePointer[Hbfeaturet]"/>
+       <usearg name="len" type="U32"/>
+       <usearg name="numfeatures" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_9071" name="pango_font_get_hb_font"
+     ponyname="pango_font_get_hb_font"
+     fid="f326"
+     lineno="602"
+     rv="NullablePointer[Hbfontt]">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+     </useargs>
+  </use>
+  <use id="_9215" name="pango_font_map_get_type"
+     ponyname="pango_font_map_get_type"
+     fid="f327"
+     lineno="119"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9216" name="pango_font_map_create_context"
+     ponyname="pango_font_map_create_context"
+     fid="f327"
+     lineno="121"
+     rv="NullablePointer[PangoContext]">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoFontMap]"/>
+     </useargs>
+  </use>
+  <use id="_9217" name="pango_font_map_load_font"
+     ponyname="pango_font_map_load_font"
+     fid="f327"
+     lineno="123"
+     rv="NullablePointer[PangoFont]">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoFontMap]"/>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9218" name="pango_font_map_load_fontset"
+     ponyname="pango_font_map_load_fontset"
+     fid="f327"
+     lineno="127"
+     rv="NullablePointer[PangoFontset]">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoFontMap]"/>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_9219" name="pango_font_map_list_families"
+     ponyname="pango_font_map_list_families"
+     fid="f327"
+     lineno="132"
+     rv="None">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoFontMap]"/>
+       <usearg name="families" type="NullablePointer[NullablePointer[NullablePointer[PangoFontFamily]]]"/>
+       <usearg name="nfamilies" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9220" name="pango_font_map_get_serial"
+     ponyname="pango_font_map_get_serial"
+     fid="f327"
+     lineno="136"
+     rv="U32">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoFontMap]"/>
+     </useargs>
+  </use>
+  <use id="_9221" name="pango_font_map_changed"
+     ponyname="pango_font_map_changed"
+     fid="f327"
+     lineno="138"
+     rv="None">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoFontMap]"/>
+     </useargs>
+  </use>
+  <use id="_9222" name="pango_font_map_get_family"
+     ponyname="pango_font_map_get_family"
+     fid="f327"
+     lineno="141"
+     rv="NullablePointer[PangoFontFamily]">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoFontMap]"/>
+       <usearg name="name" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8964" name="pango_gravity_to_rotation"
+     ponyname="pango_gravity_to_rotation"
+     fid="f328"
+     lineno="119"
+     rv="F64">
+     <useargs>
+       <usearg name="gravity" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8965" name="pango_gravity_get_for_matrix"
+     ponyname="pango_gravity_get_for_matrix"
+     fid="f328"
+     lineno="121"
+     rv="I32">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8966" name="pango_gravity_get_for_script"
+     ponyname="pango_gravity_get_for_script"
+     fid="f328"
+     lineno="123"
+     rv="I32">
+     <useargs>
+       <usearg name="script" type="I32"/>
+       <usearg name="basegravity" type="I32"/>
+       <usearg name="hint" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8967" name="pango_gravity_get_for_script_and_width"
+     ponyname="pango_gravity_get_for_script_and_width"
+     fid="f328"
+     lineno="127"
+     rv="I32">
+     <useargs>
+       <usearg name="script" type="I32"/>
+       <usearg name="wide" type="I32"/>
+       <usearg name="basegravity" type="I32"/>
+       <usearg name="hint" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8929" name="pango_matrix_get_type"
+     ponyname="pango_matrix_get_type"
+     fid="f329"
+     lineno="89"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_8930" name="pango_matrix_copy"
+     ponyname="pango_matrix_copy"
+     fid="f329"
+     lineno="92"
+     rv="NullablePointer[PangoMatrix]">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8931" name="pango_matrix_free"
+     ponyname="pango_matrix_free"
+     fid="f329"
+     lineno="94"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8932" name="pango_matrix_translate"
+     ponyname="pango_matrix_translate"
+     fid="f329"
+     lineno="97"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+       <usearg name="tx" type="F64"/>
+       <usearg name="ty" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8933" name="pango_matrix_scale"
+     ponyname="pango_matrix_scale"
+     fid="f329"
+     lineno="101"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+       <usearg name="scalex" type="F64"/>
+       <usearg name="scaley" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8934" name="pango_matrix_rotate"
+     ponyname="pango_matrix_rotate"
+     fid="f329"
+     lineno="105"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+       <usearg name="degrees" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8935" name="pango_matrix_concat"
+     ponyname="pango_matrix_concat"
+     fid="f329"
+     lineno="108"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+       <usearg name="newmatrix" type="NullablePointer[PangoMatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8936" name="pango_matrix_transform_point"
+     ponyname="pango_matrix_transform_point"
+     fid="f329"
+     lineno="111"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+       <usearg name="x" type="Pointer[F64]"/>
+       <usearg name="y" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8937" name="pango_matrix_transform_distance"
+     ponyname="pango_matrix_transform_distance"
+     fid="f329"
+     lineno="115"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+       <usearg name="dx" type="Pointer[F64]"/>
+       <usearg name="dy" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8938" name="pango_matrix_transform_rectangle"
+     ponyname="pango_matrix_transform_rectangle"
+     fid="f329"
+     lineno="119"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+       <usearg name="rect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_8939" name="pango_matrix_transform_pixel_rectangle"
+     ponyname="pango_matrix_transform_pixel_rectangle"
+     fid="f329"
+     lineno="122"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+       <usearg name="rect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_8940" name="pango_matrix_get_font_scale_factor"
+     ponyname="pango_matrix_get_font_scale_factor"
+     fid="f329"
+     lineno="125"
+     rv="F64">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8941" name="pango_matrix_get_font_scale_factors"
+     ponyname="pango_matrix_get_font_scale_factors"
+     fid="f329"
+     lineno="127"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+       <usearg name="xscale" type="Pointer[F64]"/>
+       <usearg name="yscale" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8946" name="pango_script_for_unichar"
+     ponyname="pango_script_for_unichar"
+     fid="f330"
+     lineno="310"
+     rv="I32">
+     <useargs>
+       <usearg name="ch" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_8947" name="pango_script_iter_get_type"
+     ponyname="pango_script_iter_get_type"
+     fid="f330"
+     lineno="313"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_8948" name="pango_script_iter_new"
+     ponyname="pango_script_iter_new"
+     fid="f330"
+     lineno="316"
+     rv="NullablePointer[PangoScriptIter]">
+     <useargs>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8949" name="pango_script_iter_get_range"
+     ponyname="pango_script_iter_get_range"
+     fid="f330"
+     lineno="319"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoScriptIter]"/>
+       <usearg name="start" type="NullablePointer[Pointer[U8]]"/>
+       <usearg name="g_end" type="NullablePointer[Pointer[U8]]"/>
+       <usearg name="script" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_8950" name="pango_script_iter_next"
+     ponyname="pango_script_iter_next"
+     fid="f330"
+     lineno="324"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoScriptIter]"/>
+     </useargs>
+  </use>
+  <use id="_8951" name="pango_script_iter_free"
+     ponyname="pango_script_iter_free"
+     fid="f330"
+     lineno="326"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoScriptIter]"/>
+     </useargs>
+  </use>
+  <use id="_8963" name="pango_script_get_sample_language"
+     ponyname="pango_script_get_sample_language"
+     fid="f330"
+     lineno="331"
+     rv="NullablePointer[PangoLanguage]">
+     <useargs>
+       <usearg name="script" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8954" name="pango_language_get_type"
+     ponyname="pango_language_get_type"
+     fid="f331"
+     lineno="42"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_8955" name="pango_language_from_string"
+     ponyname="pango_language_from_string"
+     fid="f331"
+     lineno="44"
+     rv="NullablePointer[PangoLanguage]">
+     <useargs>
+       <usearg name="language" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8956" name="pango_language_to_string"
+     ponyname="pango_language_to_string"
+     fid="f331"
+     lineno="47"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_8957" name="pango_language_get_sample_string"
+     ponyname="pango_language_get_sample_string"
+     fid="f331"
+     lineno="52"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_8958" name="pango_language_get_default"
+     ponyname="pango_language_get_default"
+     fid="f331"
+     lineno="54"
+     rv="NullablePointer[PangoLanguage]">
+     <useargs/>
+  </use>
+  <use id="_8959" name="pango_language_get_preferred"
+     ponyname="pango_language_get_preferred"
+     fid="f331"
+     lineno="57"
+     rv="NullablePointer[NullablePointer[PangoLanguage]]">
+     <useargs/>
+  </use>
+  <use id="_8960" name="pango_language_matches"
+     ponyname="pango_language_matches"
+     fid="f331"
+     lineno="60"
+     rv="I32">
+     <useargs>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+       <usearg name="rangelist" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8961" name="pango_language_includes_script"
+     ponyname="pango_language_includes_script"
+     fid="f331"
+     lineno="66"
+     rv="I32">
+     <useargs>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+       <usearg name="script" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8962" name="pango_language_get_scripts"
+     ponyname="pango_language_get_scripts"
+     fid="f331"
+     lineno="69"
+     rv="Pointer[I32]">
+     <useargs>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+       <usearg name="numscripts" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_8972" name="pango_bidi_type_for_unichar"
+     ponyname="pango_bidi_type_for_unichar"
+     fid="f333"
+     lineno="90"
+     rv="I32">
+     <useargs>
+       <usearg name="ch" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_8973" name="pango_unichar_direction"
+     ponyname="pango_unichar_direction"
+     fid="f333"
+     lineno="93"
+     rv="I32">
+     <useargs>
+       <usearg name="ch" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_8974" name="pango_find_base_dir"
+     ponyname="pango_find_base_dir"
+     fid="f333"
+     lineno="95"
+     rv="I32">
+     <useargs>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8975" name="pango_get_mirror_char"
+     ponyname="pango_get_mirror_char"
+     fid="f333"
+     lineno="99"
+     rv="I32">
+     <useargs>
+       <usearg name="ch" type="U32"/>
+       <usearg name="mirroredch" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_9074" name="pango_color_get_type"
+     ponyname="pango_color_get_type"
+     fid="f334"
+     lineno="57"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9075" name="pango_attribute_get_type"
+     ponyname="pango_attribute_get_type"
+     fid="f334"
+     lineno="60"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9076" name="pango_color_copy"
+     ponyname="pango_color_copy"
+     fid="f334"
+     lineno="63"
+     rv="NullablePointer[PangoColor]">
+     <useargs>
+       <usearg name="src" type="NullablePointer[PangoColor]"/>
+     </useargs>
+  </use>
+  <use id="_9077" name="pango_color_free"
+     ponyname="pango_color_free"
+     fid="f334"
+     lineno="65"
+     rv="None">
+     <useargs>
+       <usearg name="color" type="NullablePointer[PangoColor]"/>
+     </useargs>
+  </use>
+  <use id="_9078" name="pango_color_parse"
+     ponyname="pango_color_parse"
+     fid="f334"
+     lineno="67"
+     rv="I32">
+     <useargs>
+       <usearg name="color" type="NullablePointer[PangoColor]"/>
+       <usearg name="spec" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9079" name="pango_color_parse_with_alpha"
+     ponyname="pango_color_parse_with_alpha"
+     fid="f334"
+     lineno="70"
+     rv="I32">
+     <useargs>
+       <usearg name="color" type="NullablePointer[PangoColor]"/>
+       <usearg name="alpha" type="Pointer[U16]"/>
+       <usearg name="spec" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9080" name="pango_color_to_string"
+     ponyname="pango_color_to_string"
+     fid="f334"
+     lineno="75"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="color" type="NullablePointer[PangoColor]"/>
+     </useargs>
+  </use>
+  <use id="_9115" name="pango_attr_type_register"
+     ponyname="pango_attr_type_register"
+     fid="f334"
+     lineno="497"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9116" name="pango_attr_type_get_name"
+     ponyname="pango_attr_type_get_name"
+     fid="f334"
+     lineno="499"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="g_type" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9117" name="pango_attribute_init"
+     ponyname="pango_attribute_init"
+     fid="f334"
+     lineno="502"
+     rv="None">
+     <useargs>
+       <usearg name="attr" type="NullablePointer[PangoAttribute]"/>
+       <usearg name="klass" type="NullablePointer[PangoAttrClass]"/>
+     </useargs>
+  </use>
+  <use id="_9118" name="pango_attribute_copy"
+     ponyname="pango_attribute_copy"
+     fid="f334"
+     lineno="505"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="attr" type="NullablePointer[PangoAttribute]"/>
+     </useargs>
+  </use>
+  <use id="_9119" name="pango_attribute_destroy"
+     ponyname="pango_attribute_destroy"
+     fid="f334"
+     lineno="507"
+     rv="None">
+     <useargs>
+       <usearg name="attr" type="NullablePointer[PangoAttribute]"/>
+     </useargs>
+  </use>
+  <use id="_9120" name="pango_attribute_equal"
+     ponyname="pango_attribute_equal"
+     fid="f334"
+     lineno="509"
+     rv="I32">
+     <useargs>
+       <usearg name="attr1" type="NullablePointer[PangoAttribute]"/>
+       <usearg name="attr2" type="NullablePointer[PangoAttribute]"/>
+     </useargs>
+  </use>
+  <use id="_9121" name="pango_attr_language_new"
+     ponyname="pango_attr_language_new"
+     fid="f334"
+     lineno="513"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_9122" name="pango_attr_family_new"
+     ponyname="pango_attr_family_new"
+     fid="f334"
+     lineno="515"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="family" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9123" name="pango_attr_foreground_new"
+     ponyname="pango_attr_foreground_new"
+     fid="f334"
+     lineno="517"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="red" type="U16"/>
+       <usearg name="green" type="U16"/>
+       <usearg name="blue" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_9124" name="pango_attr_background_new"
+     ponyname="pango_attr_background_new"
+     fid="f334"
+     lineno="521"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="red" type="U16"/>
+       <usearg name="green" type="U16"/>
+       <usearg name="blue" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_9125" name="pango_attr_size_new"
+     ponyname="pango_attr_size_new"
+     fid="f334"
+     lineno="525"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="size" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9126" name="pango_attr_size_new_absolute"
+     ponyname="pango_attr_size_new_absolute"
+     fid="f334"
+     lineno="527"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="size" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9127" name="pango_attr_style_new"
+     ponyname="pango_attr_style_new"
+     fid="f334"
+     lineno="529"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="style" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9128" name="pango_attr_weight_new"
+     ponyname="pango_attr_weight_new"
+     fid="f334"
+     lineno="531"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="weight" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9129" name="pango_attr_variant_new"
+     ponyname="pango_attr_variant_new"
+     fid="f334"
+     lineno="533"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="variant" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9130" name="pango_attr_stretch_new"
+     ponyname="pango_attr_stretch_new"
+     fid="f334"
+     lineno="535"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="stretch" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9131" name="pango_attr_font_desc_new"
+     ponyname="pango_attr_font_desc_new"
+     fid="f334"
+     lineno="537"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9132" name="pango_attr_underline_new"
+     ponyname="pango_attr_underline_new"
+     fid="f334"
+     lineno="540"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="underline" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9133" name="pango_attr_underline_color_new"
+     ponyname="pango_attr_underline_color_new"
+     fid="f334"
+     lineno="542"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="red" type="U16"/>
+       <usearg name="green" type="U16"/>
+       <usearg name="blue" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_9134" name="pango_attr_strikethrough_new"
+     ponyname="pango_attr_strikethrough_new"
+     fid="f334"
+     lineno="546"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="strikethrough" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9135" name="pango_attr_strikethrough_color_new"
+     ponyname="pango_attr_strikethrough_color_new"
+     fid="f334"
+     lineno="548"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="red" type="U16"/>
+       <usearg name="green" type="U16"/>
+       <usearg name="blue" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_9136" name="pango_attr_rise_new"
+     ponyname="pango_attr_rise_new"
+     fid="f334"
+     lineno="553"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="rise" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9137" name="pango_attr_scale_new"
+     ponyname="pango_attr_scale_new"
+     fid="f334"
+     lineno="555"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="scalefactor" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_9138" name="pango_attr_fallback_new"
+     ponyname="pango_attr_fallback_new"
+     fid="f334"
+     lineno="557"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="enablefallback" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9139" name="pango_attr_letter_spacing_new"
+     ponyname="pango_attr_letter_spacing_new"
+     fid="f334"
+     lineno="559"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="letterspacing" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9140" name="pango_attr_shape_new"
+     ponyname="pango_attr_shape_new"
+     fid="f334"
+     lineno="562"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9141" name="pango_attr_shape_new_with_data"
+     ponyname="pango_attr_shape_new_with_data"
+     fid="f334"
+     lineno="565"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="data" type="Pointer[None]"/>
+       <usearg name="copyfunc" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="destroyfunc" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_9142" name="pango_attr_gravity_new"
+     ponyname="pango_attr_gravity_new"
+     fid="f334"
+     lineno="572"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="gravity" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9143" name="pango_attr_gravity_hint_new"
+     ponyname="pango_attr_gravity_hint_new"
+     fid="f334"
+     lineno="574"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="hint" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9144" name="pango_attr_font_features_new"
+     ponyname="pango_attr_font_features_new"
+     fid="f334"
+     lineno="576"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="features" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9145" name="pango_attr_foreground_alpha_new"
+     ponyname="pango_attr_foreground_alpha_new"
+     fid="f334"
+     lineno="578"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="alpha" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_9146" name="pango_attr_background_alpha_new"
+     ponyname="pango_attr_background_alpha_new"
+     fid="f334"
+     lineno="580"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="alpha" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_9147" name="pango_attr_allow_breaks_new"
+     ponyname="pango_attr_allow_breaks_new"
+     fid="f334"
+     lineno="582"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="allowbreaks" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9148" name="pango_attr_insert_hyphens_new"
+     ponyname="pango_attr_insert_hyphens_new"
+     fid="f334"
+     lineno="584"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="inserthyphens" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9149" name="pango_attr_overline_new"
+     ponyname="pango_attr_overline_new"
+     fid="f334"
+     lineno="587"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="overline" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9150" name="pango_attr_overline_color_new"
+     ponyname="pango_attr_overline_color_new"
+     fid="f334"
+     lineno="589"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="red" type="U16"/>
+       <usearg name="green" type="U16"/>
+       <usearg name="blue" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_9153" name="pango_attr_show_new"
+     ponyname="pango_attr_show_new"
+     fid="f334"
+     lineno="612"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9154" name="pango_attr_list_get_type"
+     ponyname="pango_attr_list_get_type"
+     fid="f334"
+     lineno="615"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9155" name="pango_attr_list_new"
+     ponyname="pango_attr_list_new"
+     fid="f334"
+     lineno="617"
+     rv="NullablePointer[PangoAttrList]">
+     <useargs/>
+  </use>
+  <use id="_9156" name="pango_attr_list_ref"
+     ponyname="pango_attr_list_ref"
+     fid="f334"
+     lineno="619"
+     rv="NullablePointer[PangoAttrList]">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+     </useargs>
+  </use>
+  <use id="_9157" name="pango_attr_list_unref"
+     ponyname="pango_attr_list_unref"
+     fid="f334"
+     lineno="621"
+     rv="None">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+     </useargs>
+  </use>
+  <use id="_9158" name="pango_attr_list_copy"
+     ponyname="pango_attr_list_copy"
+     fid="f334"
+     lineno="623"
+     rv="NullablePointer[PangoAttrList]">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+     </useargs>
+  </use>
+  <use id="_9159" name="pango_attr_list_insert"
+     ponyname="pango_attr_list_insert"
+     fid="f334"
+     lineno="625"
+     rv="None">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="attr" type="NullablePointer[PangoAttribute]"/>
+     </useargs>
+  </use>
+  <use id="_9160" name="pango_attr_list_insert_before"
+     ponyname="pango_attr_list_insert_before"
+     fid="f334"
+     lineno="628"
+     rv="None">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="attr" type="NullablePointer[PangoAttribute]"/>
+     </useargs>
+  </use>
+  <use id="_9161" name="pango_attr_list_change"
+     ponyname="pango_attr_list_change"
+     fid="f334"
+     lineno="631"
+     rv="None">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="attr" type="NullablePointer[PangoAttribute]"/>
+     </useargs>
+  </use>
+  <use id="_9162" name="pango_attr_list_splice"
+     ponyname="pango_attr_list_splice"
+     fid="f334"
+     lineno="634"
+     rv="None">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="other" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="pos" type="I32"/>
+       <usearg name="len" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9163" name="pango_attr_list_update"
+     ponyname="pango_attr_list_update"
+     fid="f334"
+     lineno="639"
+     rv="None">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="pos" type="I32"/>
+       <usearg name="remove" type="I32"/>
+       <usearg name="add" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9164" name="pango_attr_list_filter"
+     ponyname="pango_attr_list_filter"
+     fid="f334"
+     lineno="645"
+     rv="NullablePointer[PangoAttrList]">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_9165" name="pango_attr_list_get_attributes"
+     ponyname="pango_attr_list_get_attributes"
+     fid="f334"
+     lineno="650"
+     rv="NullablePointer[GSList]">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+     </useargs>
+  </use>
+  <use id="_9166" name="pango_attr_list_equal"
+     ponyname="pango_attr_list_equal"
+     fid="f334"
+     lineno="653"
+     rv="I32">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="otherlist" type="NullablePointer[PangoAttrList]"/>
+     </useargs>
+  </use>
+  <use id="_9167" name="pango_attr_iterator_get_type"
+     ponyname="pango_attr_iterator_get_type"
+     fid="f334"
+     lineno="657"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9168" name="pango_attr_list_get_iterator"
+     ponyname="pango_attr_list_get_iterator"
+     fid="f334"
+     lineno="660"
+     rv="NullablePointer[PangoAttrIterator]">
+     <useargs>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+     </useargs>
+  </use>
+  <use id="_9169" name="pango_attr_iterator_range"
+     ponyname="pango_attr_iterator_range"
+     fid="f334"
+     lineno="663"
+     rv="None">
+     <useargs>
+       <usearg name="iterator" type="NullablePointer[PangoAttrIterator]"/>
+       <usearg name="start" type="Pointer[I32]"/>
+       <usearg name="g_end" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9170" name="pango_attr_iterator_next"
+     ponyname="pango_attr_iterator_next"
+     fid="f334"
+     lineno="667"
+     rv="I32">
+     <useargs>
+       <usearg name="iterator" type="NullablePointer[PangoAttrIterator]"/>
+     </useargs>
+  </use>
+  <use id="_9171" name="pango_attr_iterator_copy"
+     ponyname="pango_attr_iterator_copy"
+     fid="f334"
+     lineno="669"
+     rv="NullablePointer[PangoAttrIterator]">
+     <useargs>
+       <usearg name="iterator" type="NullablePointer[PangoAttrIterator]"/>
+     </useargs>
+  </use>
+  <use id="_9172" name="pango_attr_iterator_destroy"
+     ponyname="pango_attr_iterator_destroy"
+     fid="f334"
+     lineno="671"
+     rv="None">
+     <useargs>
+       <usearg name="iterator" type="NullablePointer[PangoAttrIterator]"/>
+     </useargs>
+  </use>
+  <use id="_9173" name="pango_attr_iterator_get"
+     ponyname="pango_attr_iterator_get"
+     fid="f334"
+     lineno="673"
+     rv="NullablePointer[PangoAttribute]">
+     <useargs>
+       <usearg name="iterator" type="NullablePointer[PangoAttrIterator]"/>
+       <usearg name="g_type" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9174" name="pango_attr_iterator_get_font"
+     ponyname="pango_attr_iterator_get_font"
+     fid="f334"
+     lineno="676"
+     rv="None">
+     <useargs>
+       <usearg name="iterator" type="NullablePointer[PangoAttrIterator]"/>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="language" type="NullablePointer[NullablePointer[PangoLanguage]]"/>
+       <usearg name="extraattrs" type="NullablePointer[NullablePointer[GSList]]"/>
+     </useargs>
+  </use>
+  <use id="_9175" name="pango_attr_iterator_get_attrs"
+     ponyname="pango_attr_iterator_get_attrs"
+     fid="f334"
+     lineno="681"
+     rv="NullablePointer[GSList]">
+     <useargs>
+       <usearg name="iterator" type="NullablePointer[PangoAttrIterator]"/>
+     </useargs>
+  </use>
+  <use id="_9176" name="pango_parse_markup"
+     ponyname="pango_parse_markup"
+     fid="f334"
+     lineno="685"
+     rv="I32">
+     <useargs>
+       <usearg name="markuptext" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="accelmarker" type="U32"/>
+       <usearg name="attrlist" type="NullablePointer[NullablePointer[PangoAttrList]]"/>
+       <usearg name="text" type="NullablePointer[Pointer[U8]]"/>
+       <usearg name="accelchar" type="Pointer[U32]"/>
+       <usearg name="g_error" type="NullablePointer[NullablePointer[GError]]"/>
+     </useargs>
+  </use>
+  <use id="_9177" name="pango_markup_parser_new"
+     ponyname="pango_markup_parser_new"
+     fid="f334"
+     lineno="694"
+     rv="NullablePointer[GMarkupParseContext]">
+     <useargs>
+       <usearg name="accelmarker" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_9178" name="pango_markup_parser_finish"
+     ponyname="pango_markup_parser_finish"
+     fid="f334"
+     lineno="696"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMarkupParseContext]"/>
+       <usearg name="attrlist" type="NullablePointer[NullablePointer[PangoAttrList]]"/>
+       <usearg name="text" type="NullablePointer[Pointer[U8]]"/>
+       <usearg name="accelchar" type="Pointer[U32]"/>
+       <usearg name="g_error" type="NullablePointer[NullablePointer[GError]]"/>
+     </useargs>
+  </use>
+  <use id="_9183" name="pango_item_get_type"
+     ponyname="pango_item_get_type"
+     fid="f335"
+     lineno="121"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9184" name="pango_item_new"
+     ponyname="pango_item_new"
+     fid="f335"
+     lineno="124"
+     rv="NullablePointer[PangoItem]">
+     <useargs/>
+  </use>
+  <use id="_9185" name="pango_item_copy"
+     ponyname="pango_item_copy"
+     fid="f335"
+     lineno="126"
+     rv="NullablePointer[PangoItem]">
+     <useargs>
+       <usearg name="item" type="NullablePointer[PangoItem]"/>
+     </useargs>
+  </use>
+  <use id="_9186" name="pango_item_free"
+     ponyname="pango_item_free"
+     fid="f335"
+     lineno="128"
+     rv="None">
+     <useargs>
+       <usearg name="item" type="NullablePointer[PangoItem]"/>
+     </useargs>
+  </use>
+  <use id="_9187" name="pango_item_split"
+     ponyname="pango_item_split"
+     fid="f335"
+     lineno="130"
+     rv="NullablePointer[PangoItem]">
+     <useargs>
+       <usearg name="orig" type="NullablePointer[PangoItem]"/>
+       <usearg name="splitindex" type="I32"/>
+       <usearg name="splitoffset" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9188" name="pango_item_apply_attrs"
+     ponyname="pango_item_apply_attrs"
+     fid="f335"
+     lineno="134"
+     rv="None">
+     <useargs>
+       <usearg name="item" type="NullablePointer[PangoItem]"/>
+       <usearg name="iter" type="NullablePointer[PangoAttrIterator]"/>
+     </useargs>
+  </use>
+  <use id="_9194" name="pango_fontset_get_type"
+     ponyname="pango_fontset_get_type"
+     fid="f336"
+     lineno="50"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9204" name="pango_fontset_simple_get_type"
+     ponyname="pango_fontset_simple_get_type"
+     fid="f336"
+     lineno="148"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9205" name="pango_fontset_simple_new"
+     ponyname="pango_fontset_simple_new"
+     fid="f336"
+     lineno="151"
+     rv="NullablePointer[PangoFontsetSimple]">
+     <useargs>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_9206" name="pango_fontset_simple_append"
+     ponyname="pango_fontset_simple_append"
+     fid="f336"
+     lineno="153"
+     rv="None">
+     <useargs>
+       <usearg name="fontset" type="NullablePointer[PangoFontsetSimple]"/>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+     </useargs>
+  </use>
+  <use id="_9207" name="pango_fontset_simple_size"
+     ponyname="pango_fontset_simple_size"
+     fid="f336"
+     lineno="156"
+     rv="I32">
+     <useargs>
+       <usearg name="fontset" type="NullablePointer[PangoFontsetSimple]"/>
+     </useargs>
+  </use>
+  <use id="_9208" name="pango_fontset_get_font"
+     ponyname="pango_fontset_get_font"
+     fid="f336"
+     lineno="160"
+     rv="NullablePointer[PangoFont]">
+     <useargs>
+       <usearg name="fontset" type="NullablePointer[PangoFontset]"/>
+       <usearg name="wc" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_9209" name="pango_fontset_get_metrics"
+     ponyname="pango_fontset_get_metrics"
+     fid="f336"
+     lineno="163"
+     rv="NullablePointer[PangoFontMetrics]">
+     <useargs>
+       <usearg name="fontset" type="NullablePointer[PangoFontset]"/>
+     </useargs>
+  </use>
+  <use id="_9210" name="pango_fontset_foreach"
+     ponyname="pango_fontset_foreach"
+     fid="f336"
+     lineno="165"
+     rv="None">
+     <useargs>
+       <usearg name="fontset" type="NullablePointer[PangoFontset]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_9225" name="pango_context_get_type"
+     ponyname="pango_context_get_type"
+     fid="f337"
+     lineno="52"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9226" name="pango_context_new"
+     ponyname="pango_context_new"
+     fid="f337"
+     lineno="55"
+     rv="NullablePointer[PangoContext]">
+     <useargs/>
+  </use>
+  <use id="_9227" name="pango_context_changed"
+     ponyname="pango_context_changed"
+     fid="f337"
+     lineno="57"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9228" name="pango_context_set_font_map"
+     ponyname="pango_context_set_font_map"
+     fid="f337"
+     lineno="59"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="fontmap" type="NullablePointer[PangoFontMap]"/>
+     </useargs>
+  </use>
+  <use id="_9229" name="pango_context_get_font_map"
+     ponyname="pango_context_get_font_map"
+     fid="f337"
+     lineno="62"
+     rv="NullablePointer[PangoFontMap]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9230" name="pango_context_get_serial"
+     ponyname="pango_context_get_serial"
+     fid="f337"
+     lineno="64"
+     rv="U32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9231" name="pango_context_list_families"
+     ponyname="pango_context_list_families"
+     fid="f337"
+     lineno="66"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="families" type="NullablePointer[NullablePointer[NullablePointer[PangoFontFamily]]]"/>
+       <usearg name="nfamilies" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9232" name="pango_context_load_font"
+     ponyname="pango_context_load_font"
+     fid="f337"
+     lineno="70"
+     rv="NullablePointer[PangoFont]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9233" name="pango_context_load_fontset"
+     ponyname="pango_context_load_fontset"
+     fid="f337"
+     lineno="73"
+     rv="NullablePointer[PangoFontset]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_9234" name="pango_context_get_metrics"
+     ponyname="pango_context_get_metrics"
+     fid="f337"
+     lineno="78"
+     rv="NullablePointer[PangoFontMetrics]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_9235" name="pango_context_set_font_description"
+     ponyname="pango_context_set_font_description"
+     fid="f337"
+     lineno="83"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9236" name="pango_context_get_font_description"
+     ponyname="pango_context_get_font_description"
+     fid="f337"
+     lineno="86"
+     rv="NullablePointer[PangoFontDescription]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9237" name="pango_context_get_language"
+     ponyname="pango_context_get_language"
+     fid="f337"
+     lineno="88"
+     rv="NullablePointer[PangoLanguage]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9238" name="pango_context_set_language"
+     ponyname="pango_context_set_language"
+     fid="f337"
+     lineno="90"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="language" type="NullablePointer[PangoLanguage]"/>
+     </useargs>
+  </use>
+  <use id="_9239" name="pango_context_set_base_dir"
+     ponyname="pango_context_set_base_dir"
+     fid="f337"
+     lineno="93"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="direction" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9240" name="pango_context_get_base_dir"
+     ponyname="pango_context_get_base_dir"
+     fid="f337"
+     lineno="96"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9241" name="pango_context_set_base_gravity"
+     ponyname="pango_context_set_base_gravity"
+     fid="f337"
+     lineno="98"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="gravity" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9242" name="pango_context_get_base_gravity"
+     ponyname="pango_context_get_base_gravity"
+     fid="f337"
+     lineno="101"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9243" name="pango_context_get_gravity"
+     ponyname="pango_context_get_gravity"
+     fid="f337"
+     lineno="103"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9244" name="pango_context_set_gravity_hint"
+     ponyname="pango_context_set_gravity_hint"
+     fid="f337"
+     lineno="105"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="hint" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9245" name="pango_context_get_gravity_hint"
+     ponyname="pango_context_get_gravity_hint"
+     fid="f337"
+     lineno="108"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9246" name="pango_context_set_matrix"
+     ponyname="pango_context_set_matrix"
+     fid="f337"
+     lineno="111"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+     </useargs>
+  </use>
+  <use id="_9247" name="pango_context_get_matrix"
+     ponyname="pango_context_get_matrix"
+     fid="f337"
+     lineno="114"
+     rv="NullablePointer[PangoMatrix]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9248" name="pango_context_set_round_glyph_positions"
+     ponyname="pango_context_set_round_glyph_positions"
+     fid="f337"
+     lineno="117"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="roundpositions" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9249" name="pango_context_get_round_glyph_positions"
+     ponyname="pango_context_get_round_glyph_positions"
+     fid="f337"
+     lineno="120"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9250" name="pango_itemize"
+     ponyname="pango_itemize"
+     fid="f337"
+     lineno="128"
+     rv="NullablePointer[GList]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="startindex" type="I32"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="attrs" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="cachediter" type="NullablePointer[PangoAttrIterator]"/>
+     </useargs>
+  </use>
+  <use id="_9251" name="pango_itemize_with_base_dir"
+     ponyname="pango_itemize_with_base_dir"
+     fid="f337"
+     lineno="135"
+     rv="NullablePointer[GList]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="basedir" type="I32"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="startindex" type="I32"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="attrs" type="NullablePointer[PangoAttrList]"/>
+       <usearg name="cachediter" type="NullablePointer[PangoAttrIterator]"/>
+     </useargs>
+  </use>
+  <use id="_9261" name="pango_glyph_string_new"
+     ponyname="pango_glyph_string_new"
+     fid="f338"
+     lineno="140"
+     rv="NullablePointer[PangoGlyphString]">
+     <useargs/>
+  </use>
+  <use id="_9262" name="pango_glyph_string_set_size"
+     ponyname="pango_glyph_string_set_size"
+     fid="f338"
+     lineno="142"
+     rv="None">
+     <useargs>
+       <usearg name="string" type="NullablePointer[PangoGlyphString]"/>
+       <usearg name="newlen" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9263" name="pango_glyph_string_get_type"
+     ponyname="pango_glyph_string_get_type"
+     fid="f338"
+     lineno="145"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9264" name="pango_glyph_string_copy"
+     ponyname="pango_glyph_string_copy"
+     fid="f338"
+     lineno="147"
+     rv="NullablePointer[PangoGlyphString]">
+     <useargs>
+       <usearg name="string" type="NullablePointer[PangoGlyphString]"/>
+     </useargs>
+  </use>
+  <use id="_9265" name="pango_glyph_string_free"
+     ponyname="pango_glyph_string_free"
+     fid="f338"
+     lineno="149"
+     rv="None">
+     <useargs>
+       <usearg name="string" type="NullablePointer[PangoGlyphString]"/>
+     </useargs>
+  </use>
+  <use id="_9266" name="pango_glyph_string_extents"
+     ponyname="pango_glyph_string_extents"
+     fid="f338"
+     lineno="151"
+     rv="None">
+     <useargs>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9267" name="pango_glyph_string_get_width"
+     ponyname="pango_glyph_string_get_width"
+     fid="f338"
+     lineno="156"
+     rv="I32">
+     <useargs>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+     </useargs>
+  </use>
+  <use id="_9268" name="pango_glyph_string_extents_range"
+     ponyname="pango_glyph_string_extents_range"
+     fid="f338"
+     lineno="159"
+     rv="None">
+     <useargs>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+       <usearg name="start" type="I32"/>
+       <usearg name="g_end" type="I32"/>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9269" name="pango_glyph_string_get_logical_widths"
+     ponyname="pango_glyph_string_get_logical_widths"
+     fid="f338"
+     lineno="167"
+     rv="None">
+     <useargs>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="embeddinglevel" type="I32"/>
+       <usearg name="logicalwidths" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9270" name="pango_glyph_string_index_to_x"
+     ponyname="pango_glyph_string_index_to_x"
+     fid="f338"
+     lineno="174"
+     rv="None">
+     <useargs>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="analysis" type="NullablePointer[PangoAnalysis]"/>
+       <usearg name="index" type="I32"/>
+       <usearg name="trailing" type="I32"/>
+       <usearg name="xpos" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9271" name="pango_glyph_string_x_to_index"
+     ponyname="pango_glyph_string_x_to_index"
+     fid="f338"
+     lineno="182"
+     rv="None">
+     <useargs>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="analysis" type="NullablePointer[PangoAnalysis]"/>
+       <usearg name="xpos" type="I32"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="trailing" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9272" name="pango_shape"
+     ponyname="pango_shape"
+     fid="f338"
+     lineno="193"
+     rv="None">
+     <useargs>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="analysis" type="NullablePointer[PangoAnalysis]"/>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+     </useargs>
+  </use>
+  <use id="_9273" name="pango_shape_full"
+     ponyname="pango_shape_full"
+     fid="f338"
+     lineno="199"
+     rv="None">
+     <useargs>
+       <usearg name="itemtext" type="Pointer[U8]"/>
+       <usearg name="itemlength" type="I32"/>
+       <usearg name="paragraphtext" type="Pointer[U8]"/>
+       <usearg name="paragraphlength" type="I32"/>
+       <usearg name="analysis" type="NullablePointer[PangoAnalysis]"/>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+     </useargs>
+  </use>
+  <use id="_9276" name="pango_shape_with_flags"
+     ponyname="pango_shape_with_flags"
+     fid="f338"
+     lineno="224"
+     rv="None">
+     <useargs>
+       <usearg name="itemtext" type="Pointer[U8]"/>
+       <usearg name="itemlength" type="I32"/>
+       <usearg name="paragraphtext" type="Pointer[U8]"/>
+       <usearg name="paragraphlength" type="I32"/>
+       <usearg name="analysis" type="NullablePointer[PangoAnalysis]"/>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9277" name="pango_reorder_items"
+     ponyname="pango_reorder_items"
+     fid="f338"
+     lineno="233"
+     rv="NullablePointer[GList]">
+     <useargs>
+       <usearg name="logicalitems" type="NullablePointer[GList]"/>
+     </useargs>
+  </use>
+  <use id="_9297" name="pango_attr_type_get_type"
+     ponyname="pango_attr_type_get_type"
+     fid="f339"
+     lineno="15"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9298" name="pango_underline_get_type"
+     ponyname="pango_underline_get_type"
+     fid="f339"
+     lineno="18"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9299" name="pango_overline_get_type"
+     ponyname="pango_overline_get_type"
+     fid="f339"
+     lineno="21"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9300" name="pango_show_flags_get_type"
+     ponyname="pango_show_flags_get_type"
+     fid="f339"
+     lineno="24"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9301" name="pango_bidi_type_get_type"
+     ponyname="pango_bidi_type_get_type"
+     fid="f339"
+     lineno="29"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9302" name="pango_coverage_level_get_type"
+     ponyname="pango_coverage_level_get_type"
+     fid="f339"
+     lineno="34"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9303" name="pango_direction_get_type"
+     ponyname="pango_direction_get_type"
+     fid="f339"
+     lineno="39"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9304" name="pango_style_get_type"
+     ponyname="pango_style_get_type"
+     fid="f339"
+     lineno="44"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9305" name="pango_variant_get_type"
+     ponyname="pango_variant_get_type"
+     fid="f339"
+     lineno="47"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9306" name="pango_weight_get_type"
+     ponyname="pango_weight_get_type"
+     fid="f339"
+     lineno="50"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9307" name="pango_stretch_get_type"
+     ponyname="pango_stretch_get_type"
+     fid="f339"
+     lineno="53"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9308" name="pango_font_mask_get_type"
+     ponyname="pango_font_mask_get_type"
+     fid="f339"
+     lineno="56"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9309" name="pango_shape_flags_get_type"
+     ponyname="pango_shape_flags_get_type"
+     fid="f339"
+     lineno="61"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9310" name="pango_gravity_get_type"
+     ponyname="pango_gravity_get_type"
+     fid="f339"
+     lineno="66"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9311" name="pango_gravity_hint_get_type"
+     ponyname="pango_gravity_hint_get_type"
+     fid="f339"
+     lineno="69"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9312" name="pango_alignment_get_type"
+     ponyname="pango_alignment_get_type"
+     fid="f339"
+     lineno="74"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9313" name="pango_wrap_mode_get_type"
+     ponyname="pango_wrap_mode_get_type"
+     fid="f339"
+     lineno="77"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9314" name="pango_ellipsize_mode_get_type"
+     ponyname="pango_ellipsize_mode_get_type"
+     fid="f339"
+     lineno="80"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9315" name="pango_render_part_get_type"
+     ponyname="pango_render_part_get_type"
+     fid="f339"
+     lineno="85"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9316" name="pango_script_get_type"
+     ponyname="pango_script_get_type"
+     fid="f339"
+     lineno="90"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9317" name="pango_tab_align_get_type"
+     ponyname="pango_tab_align_get_type"
+     fid="f339"
+     lineno="95"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9320" name="pango_glyph_item_get_type"
+     ponyname="pango_glyph_item_get_type"
+     fid="f340"
+     lineno="60"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9321" name="pango_glyph_item_split"
+     ponyname="pango_glyph_item_split"
+     fid="f340"
+     lineno="63"
+     rv="NullablePointer[PangoGlyphItem]">
+     <useargs>
+       <usearg name="orig" type="NullablePointer[PangoGlyphItem]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="splitindex" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9322" name="pango_glyph_item_copy"
+     ponyname="pango_glyph_item_copy"
+     fid="f340"
+     lineno="67"
+     rv="NullablePointer[PangoGlyphItem]">
+     <useargs>
+       <usearg name="orig" type="NullablePointer[PangoGlyphItem]"/>
+     </useargs>
+  </use>
+  <use id="_9323" name="pango_glyph_item_free"
+     ponyname="pango_glyph_item_free"
+     fid="f340"
+     lineno="69"
+     rv="None">
+     <useargs>
+       <usearg name="glyphitem" type="NullablePointer[PangoGlyphItem]"/>
+     </useargs>
+  </use>
+  <use id="_9324" name="pango_glyph_item_apply_attrs"
+     ponyname="pango_glyph_item_apply_attrs"
+     fid="f340"
+     lineno="71"
+     rv="NullablePointer[GSList]">
+     <useargs>
+       <usearg name="glyphitem" type="NullablePointer[PangoGlyphItem]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="list" type="NullablePointer[PangoAttrList]"/>
+     </useargs>
+  </use>
+  <use id="_9325" name="pango_glyph_item_letter_space"
+     ponyname="pango_glyph_item_letter_space"
+     fid="f340"
+     lineno="75"
+     rv="None">
+     <useargs>
+       <usearg name="glyphitem" type="NullablePointer[PangoGlyphItem]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="logattrs" type="NullablePointer[PangoLogAttr]"/>
+       <usearg name="letterspacing" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9326" name="pango_glyph_item_get_logical_widths"
+     ponyname="pango_glyph_item_get_logical_widths"
+     fid="f340"
+     lineno="80"
+     rv="None">
+     <useargs>
+       <usearg name="glyphitem" type="NullablePointer[PangoGlyphItem]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="logicalwidths" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9329" name="pango_glyph_item_iter_get_type"
+     ponyname="pango_glyph_item_iter_get_type"
+     fid="f340"
+     lineno="157"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9330" name="pango_glyph_item_iter_copy"
+     ponyname="pango_glyph_item_iter_copy"
+     fid="f340"
+     lineno="159"
+     rv="NullablePointer[PangoGlyphItemIter]">
+     <useargs>
+       <usearg name="orig" type="NullablePointer[PangoGlyphItemIter]"/>
+     </useargs>
+  </use>
+  <use id="_9331" name="pango_glyph_item_iter_free"
+     ponyname="pango_glyph_item_iter_free"
+     fid="f340"
+     lineno="161"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoGlyphItemIter]"/>
+     </useargs>
+  </use>
+  <use id="_9332" name="pango_glyph_item_iter_init_start"
+     ponyname="pango_glyph_item_iter_init_start"
+     fid="f340"
+     lineno="164"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoGlyphItemIter]"/>
+       <usearg name="glyphitem" type="NullablePointer[PangoGlyphItem]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9333" name="pango_glyph_item_iter_init_end"
+     ponyname="pango_glyph_item_iter_init_end"
+     fid="f340"
+     lineno="168"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoGlyphItemIter]"/>
+       <usearg name="glyphitem" type="NullablePointer[PangoGlyphItem]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9334" name="pango_glyph_item_iter_next_cluster"
+     ponyname="pango_glyph_item_iter_next_cluster"
+     fid="f340"
+     lineno="172"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoGlyphItemIter]"/>
+     </useargs>
+  </use>
+  <use id="_9335" name="pango_glyph_item_iter_prev_cluster"
+     ponyname="pango_glyph_item_iter_prev_cluster"
+     fid="f340"
+     lineno="174"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoGlyphItemIter]"/>
+     </useargs>
+  </use>
+  <use id="_9340" name="pango_tab_array_new"
+     ponyname="pango_tab_array_new"
+     fid="f341"
+     lineno="53"
+     rv="NullablePointer[PangoTabArray]">
+     <useargs>
+       <usearg name="initialsize" type="I32"/>
+       <usearg name="positionsinpixels" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9341" name="pango_tab_array_new_with_positions"
+     ponyname="pango_tab_array_new_with_positions"
+     fid="f341"
+     lineno="56"
+     rv="NullablePointer[PangoTabArray]">
+     <useargs>
+       <usearg name="size" type="I32"/>
+       <usearg name="positionsinpixels" type="I32"/>
+       <usearg name="firstalignment" type="I32"/>
+       <usearg name="firstposition" type="I32"/>
+       <usearg name="parg4" type="..."/>
+     </useargs>
+  </use>
+  <use id="_9342" name="pango_tab_array_get_type"
+     ponyname="pango_tab_array_get_type"
+     fid="f341"
+     lineno="62"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9343" name="pango_tab_array_copy"
+     ponyname="pango_tab_array_copy"
+     fid="f341"
+     lineno="64"
+     rv="NullablePointer[PangoTabArray]">
+     <useargs>
+       <usearg name="src" type="NullablePointer[PangoTabArray]"/>
+     </useargs>
+  </use>
+  <use id="_9344" name="pango_tab_array_free"
+     ponyname="pango_tab_array_free"
+     fid="f341"
+     lineno="66"
+     rv="None">
+     <useargs>
+       <usearg name="tabarray" type="NullablePointer[PangoTabArray]"/>
+     </useargs>
+  </use>
+  <use id="_9345" name="pango_tab_array_get_size"
+     ponyname="pango_tab_array_get_size"
+     fid="f341"
+     lineno="68"
+     rv="I32">
+     <useargs>
+       <usearg name="tabarray" type="NullablePointer[PangoTabArray]"/>
+     </useargs>
+  </use>
+  <use id="_9346" name="pango_tab_array_resize"
+     ponyname="pango_tab_array_resize"
+     fid="f341"
+     lineno="70"
+     rv="None">
+     <useargs>
+       <usearg name="tabarray" type="NullablePointer[PangoTabArray]"/>
+       <usearg name="newsize" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9347" name="pango_tab_array_set_tab"
+     ponyname="pango_tab_array_set_tab"
+     fid="f341"
+     lineno="73"
+     rv="None">
+     <useargs>
+       <usearg name="tabarray" type="NullablePointer[PangoTabArray]"/>
+       <usearg name="tabindex" type="I32"/>
+       <usearg name="alignment" type="I32"/>
+       <usearg name="location" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9348" name="pango_tab_array_get_tab"
+     ponyname="pango_tab_array_get_tab"
+     fid="f341"
+     lineno="78"
+     rv="None">
+     <useargs>
+       <usearg name="tabarray" type="NullablePointer[PangoTabArray]"/>
+       <usearg name="tabindex" type="I32"/>
+       <usearg name="alignment" type="Pointer[I32]"/>
+       <usearg name="location" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9349" name="pango_tab_array_get_tabs"
+     ponyname="pango_tab_array_get_tabs"
+     fid="f341"
+     lineno="83"
+     rv="None">
+     <useargs>
+       <usearg name="tabarray" type="NullablePointer[PangoTabArray]"/>
+       <usearg name="alignments" type="NullablePointer[Pointer[I32]]"/>
+       <usearg name="locations" type="NullablePointer[Pointer[I32]]"/>
+     </useargs>
+  </use>
+  <use id="_9350" name="pango_tab_array_get_positions_in_pixels"
+     ponyname="pango_tab_array_get_positions_in_pixels"
+     fid="f341"
+     lineno="88"
+     rv="I32">
+     <useargs>
+       <usearg name="tabarray" type="NullablePointer[PangoTabArray]"/>
+     </useargs>
+  </use>
+  <use id="_9364" name="pango_layout_get_type"
+     ponyname="pango_layout_get_type"
+     fid="f342"
+     lineno="140"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9365" name="pango_layout_new"
+     ponyname="pango_layout_new"
+     fid="f342"
+     lineno="142"
+     rv="NullablePointer[PangoLayout]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9366" name="pango_layout_copy"
+     ponyname="pango_layout_copy"
+     fid="f342"
+     lineno="144"
+     rv="NullablePointer[PangoLayout]">
+     <useargs>
+       <usearg name="src" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9367" name="pango_layout_get_context"
+     ponyname="pango_layout_get_context"
+     fid="f342"
+     lineno="147"
+     rv="NullablePointer[PangoContext]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9368" name="pango_layout_set_attributes"
+     ponyname="pango_layout_set_attributes"
+     fid="f342"
+     lineno="150"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="attrs" type="NullablePointer[PangoAttrList]"/>
+     </useargs>
+  </use>
+  <use id="_9369" name="pango_layout_get_attributes"
+     ponyname="pango_layout_get_attributes"
+     fid="f342"
+     lineno="153"
+     rv="NullablePointer[PangoAttrList]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9370" name="pango_layout_set_text"
+     ponyname="pango_layout_set_text"
+     fid="f342"
+     lineno="156"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9371" name="pango_layout_get_text"
+     ponyname="pango_layout_get_text"
+     fid="f342"
+     lineno="160"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9372" name="pango_layout_get_character_count"
+     ponyname="pango_layout_get_character_count"
+     fid="f342"
+     lineno="163"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9373" name="pango_layout_set_markup"
+     ponyname="pango_layout_set_markup"
+     fid="f342"
+     lineno="166"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="markup" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9374" name="pango_layout_set_markup_with_accel"
+     ponyname="pango_layout_set_markup_with_accel"
+     fid="f342"
+     lineno="171"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="markup" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="accelmarker" type="U32"/>
+       <usearg name="accelchar" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_9375" name="pango_layout_set_font_description"
+     ponyname="pango_layout_set_font_description"
+     fid="f342"
+     lineno="178"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="desc" type="NullablePointer[PangoFontDescription]"/>
+     </useargs>
+  </use>
+  <use id="_9376" name="pango_layout_get_font_description"
+     ponyname="pango_layout_get_font_description"
+     fid="f342"
+     lineno="182"
+     rv="NullablePointer[PangoFontDescription]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9377" name="pango_layout_set_width"
+     ponyname="pango_layout_set_width"
+     fid="f342"
+     lineno="185"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="width" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9378" name="pango_layout_get_width"
+     ponyname="pango_layout_get_width"
+     fid="f342"
+     lineno="188"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9379" name="pango_layout_set_height"
+     ponyname="pango_layout_set_height"
+     fid="f342"
+     lineno="190"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9380" name="pango_layout_get_height"
+     ponyname="pango_layout_get_height"
+     fid="f342"
+     lineno="193"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9381" name="pango_layout_set_wrap"
+     ponyname="pango_layout_set_wrap"
+     fid="f342"
+     lineno="195"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="wrap" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9382" name="pango_layout_get_wrap"
+     ponyname="pango_layout_get_wrap"
+     fid="f342"
+     lineno="198"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9383" name="pango_layout_is_wrapped"
+     ponyname="pango_layout_is_wrapped"
+     fid="f342"
+     lineno="200"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9384" name="pango_layout_set_indent"
+     ponyname="pango_layout_set_indent"
+     fid="f342"
+     lineno="202"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="indent" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9385" name="pango_layout_get_indent"
+     ponyname="pango_layout_get_indent"
+     fid="f342"
+     lineno="205"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9386" name="pango_layout_set_spacing"
+     ponyname="pango_layout_set_spacing"
+     fid="f342"
+     lineno="207"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="spacing" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9387" name="pango_layout_get_spacing"
+     ponyname="pango_layout_get_spacing"
+     fid="f342"
+     lineno="210"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9388" name="pango_layout_set_line_spacing"
+     ponyname="pango_layout_set_line_spacing"
+     fid="f342"
+     lineno="212"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="factor" type="F32"/>
+     </useargs>
+  </use>
+  <use id="_9389" name="pango_layout_get_line_spacing"
+     ponyname="pango_layout_get_line_spacing"
+     fid="f342"
+     lineno="215"
+     rv="F32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9390" name="pango_layout_set_justify"
+     ponyname="pango_layout_set_justify"
+     fid="f342"
+     lineno="217"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="justify" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9391" name="pango_layout_get_justify"
+     ponyname="pango_layout_get_justify"
+     fid="f342"
+     lineno="220"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9392" name="pango_layout_set_auto_dir"
+     ponyname="pango_layout_set_auto_dir"
+     fid="f342"
+     lineno="222"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="autodir" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9393" name="pango_layout_get_auto_dir"
+     ponyname="pango_layout_get_auto_dir"
+     fid="f342"
+     lineno="225"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9394" name="pango_layout_set_alignment"
+     ponyname="pango_layout_set_alignment"
+     fid="f342"
+     lineno="227"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="alignment" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9395" name="pango_layout_get_alignment"
+     ponyname="pango_layout_get_alignment"
+     fid="f342"
+     lineno="230"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9396" name="pango_layout_set_tabs"
+     ponyname="pango_layout_set_tabs"
+     fid="f342"
+     lineno="233"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="tabs" type="NullablePointer[PangoTabArray]"/>
+     </useargs>
+  </use>
+  <use id="_9397" name="pango_layout_get_tabs"
+     ponyname="pango_layout_get_tabs"
+     fid="f342"
+     lineno="236"
+     rv="NullablePointer[PangoTabArray]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9398" name="pango_layout_set_single_paragraph_mode"
+     ponyname="pango_layout_set_single_paragraph_mode"
+     fid="f342"
+     lineno="239"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="setting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9399" name="pango_layout_get_single_paragraph_mode"
+     ponyname="pango_layout_get_single_paragraph_mode"
+     fid="f342"
+     lineno="242"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9400" name="pango_layout_set_ellipsize"
+     ponyname="pango_layout_set_ellipsize"
+     fid="f342"
+     lineno="245"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="ellipsize" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9401" name="pango_layout_get_ellipsize"
+     ponyname="pango_layout_get_ellipsize"
+     fid="f342"
+     lineno="248"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9402" name="pango_layout_is_ellipsized"
+     ponyname="pango_layout_is_ellipsized"
+     fid="f342"
+     lineno="250"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9403" name="pango_layout_get_unknown_glyphs_count"
+     ponyname="pango_layout_get_unknown_glyphs_count"
+     fid="f342"
+     lineno="253"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9404" name="pango_layout_get_direction"
+     ponyname="pango_layout_get_direction"
+     fid="f342"
+     lineno="256"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="index" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9405" name="pango_layout_context_changed"
+     ponyname="pango_layout_context_changed"
+     fid="f342"
+     lineno="260"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9406" name="pango_layout_get_serial"
+     ponyname="pango_layout_get_serial"
+     fid="f342"
+     lineno="262"
+     rv="U32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9407" name="pango_layout_get_log_attrs"
+     ponyname="pango_layout_get_log_attrs"
+     fid="f342"
+     lineno="265"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="attrs" type="NullablePointer[NullablePointer[PangoLogAttr]]"/>
+       <usearg name="nattrs" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9408" name="pango_layout_get_log_attrs_readonly"
+     ponyname="pango_layout_get_log_attrs_readonly"
+     fid="f342"
+     lineno="270"
+     rv="NullablePointer[PangoLogAttr]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="nattrs" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9409" name="pango_layout_index_to_pos"
+     ponyname="pango_layout_index_to_pos"
+     fid="f342"
+     lineno="274"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="index" type="I32"/>
+       <usearg name="pos" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9410" name="pango_layout_index_to_line_x"
+     ponyname="pango_layout_index_to_line_x"
+     fid="f342"
+     lineno="278"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="index" type="I32"/>
+       <usearg name="trailing" type="I32"/>
+       <usearg name="line" type="Pointer[I32]"/>
+       <usearg name="xpos" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9411" name="pango_layout_get_cursor_pos"
+     ponyname="pango_layout_get_cursor_pos"
+     fid="f342"
+     lineno="284"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="index" type="I32"/>
+       <usearg name="strongpos" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="weakpos" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9412" name="pango_layout_move_cursor_visually"
+     ponyname="pango_layout_move_cursor_visually"
+     fid="f342"
+     lineno="289"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="strong" type="I32"/>
+       <usearg name="oldindex" type="I32"/>
+       <usearg name="oldtrailing" type="I32"/>
+       <usearg name="direction" type="I32"/>
+       <usearg name="newindex" type="Pointer[I32]"/>
+       <usearg name="newtrailing" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9413" name="pango_layout_xy_to_index"
+     ponyname="pango_layout_xy_to_index"
+     fid="f342"
+     lineno="297"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="x" type="I32"/>
+       <usearg name="y" type="I32"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="trailing" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9414" name="pango_layout_get_extents"
+     ponyname="pango_layout_get_extents"
+     fid="f342"
+     lineno="303"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9415" name="pango_layout_get_pixel_extents"
+     ponyname="pango_layout_get_pixel_extents"
+     fid="f342"
+     lineno="307"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9416" name="pango_layout_get_size"
+     ponyname="pango_layout_get_size"
+     fid="f342"
+     lineno="311"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="width" type="Pointer[I32]"/>
+       <usearg name="height" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9417" name="pango_layout_get_pixel_size"
+     ponyname="pango_layout_get_pixel_size"
+     fid="f342"
+     lineno="315"
+     rv="None">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="width" type="Pointer[I32]"/>
+       <usearg name="height" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9418" name="pango_layout_get_baseline"
+     ponyname="pango_layout_get_baseline"
+     fid="f342"
+     lineno="319"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9419" name="pango_layout_get_line_count"
+     ponyname="pango_layout_get_line_count"
+     fid="f342"
+     lineno="322"
+     rv="I32">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9420" name="pango_layout_get_line"
+     ponyname="pango_layout_get_line"
+     fid="f342"
+     lineno="324"
+     rv="NullablePointer[PangoLayoutLine]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="line" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9421" name="pango_layout_get_line_readonly"
+     ponyname="pango_layout_get_line_readonly"
+     fid="f342"
+     lineno="327"
+     rv="NullablePointer[PangoLayoutLine]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="line" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9422" name="pango_layout_get_lines"
+     ponyname="pango_layout_get_lines"
+     fid="f342"
+     lineno="330"
+     rv="NullablePointer[GSList]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9423" name="pango_layout_get_lines_readonly"
+     ponyname="pango_layout_get_lines_readonly"
+     fid="f342"
+     lineno="332"
+     rv="NullablePointer[GSList]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9424" name="pango_layout_line_get_type"
+     ponyname="pango_layout_line_get_type"
+     fid="f342"
+     lineno="338"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9425" name="pango_layout_line_ref"
+     ponyname="pango_layout_line_ref"
+     fid="f342"
+     lineno="341"
+     rv="NullablePointer[PangoLayoutLine]">
+     <useargs>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+     </useargs>
+  </use>
+  <use id="_9426" name="pango_layout_line_unref"
+     ponyname="pango_layout_line_unref"
+     fid="f342"
+     lineno="343"
+     rv="None">
+     <useargs>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+     </useargs>
+  </use>
+  <use id="_9427" name="pango_layout_line_x_to_index"
+     ponyname="pango_layout_line_x_to_index"
+     fid="f342"
+     lineno="346"
+     rv="I32">
+     <useargs>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+       <usearg name="xpos" type="I32"/>
+       <usearg name="index" type="Pointer[I32]"/>
+       <usearg name="trailing" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9428" name="pango_layout_line_index_to_x"
+     ponyname="pango_layout_line_index_to_x"
+     fid="f342"
+     lineno="351"
+     rv="None">
+     <useargs>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+       <usearg name="index" type="I32"/>
+       <usearg name="trailing" type="I32"/>
+       <usearg name="xpos" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9429" name="pango_layout_line_get_x_ranges"
+     ponyname="pango_layout_line_get_x_ranges"
+     fid="f342"
+     lineno="356"
+     rv="None">
+     <useargs>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+       <usearg name="startindex" type="I32"/>
+       <usearg name="endindex" type="I32"/>
+       <usearg name="ranges" type="NullablePointer[Pointer[I32]]"/>
+       <usearg name="nranges" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9430" name="pango_layout_line_get_extents"
+     ponyname="pango_layout_line_get_extents"
+     fid="f342"
+     lineno="362"
+     rv="None">
+     <useargs>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9431" name="pango_layout_line_get_height"
+     ponyname="pango_layout_line_get_height"
+     fid="f342"
+     lineno="366"
+     rv="None">
+     <useargs>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+       <usearg name="height" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9432" name="pango_layout_line_get_pixel_extents"
+     ponyname="pango_layout_line_get_pixel_extents"
+     fid="f342"
+     lineno="370"
+     rv="None">
+     <useargs>
+       <usearg name="layoutline" type="NullablePointer[PangoLayoutLine]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9435" name="pango_layout_iter_get_type"
+     ponyname="pango_layout_iter_get_type"
+     fid="f342"
+     lineno="379"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9436" name="pango_layout_get_iter"
+     ponyname="pango_layout_get_iter"
+     fid="f342"
+     lineno="382"
+     rv="NullablePointer[PangoLayoutIter]">
+     <useargs>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9437" name="pango_layout_iter_copy"
+     ponyname="pango_layout_iter_copy"
+     fid="f342"
+     lineno="384"
+     rv="NullablePointer[PangoLayoutIter]">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9438" name="pango_layout_iter_free"
+     ponyname="pango_layout_iter_free"
+     fid="f342"
+     lineno="386"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9439" name="pango_layout_iter_get_index"
+     ponyname="pango_layout_iter_get_index"
+     fid="f342"
+     lineno="389"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9440" name="pango_layout_iter_get_run"
+     ponyname="pango_layout_iter_get_run"
+     fid="f342"
+     lineno="391"
+     rv="NullablePointer[PangoGlyphItem]">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9441" name="pango_layout_iter_get_run_readonly"
+     ponyname="pango_layout_iter_get_run_readonly"
+     fid="f342"
+     lineno="393"
+     rv="NullablePointer[PangoGlyphItem]">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9442" name="pango_layout_iter_get_line"
+     ponyname="pango_layout_iter_get_line"
+     fid="f342"
+     lineno="395"
+     rv="NullablePointer[PangoLayoutLine]">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9443" name="pango_layout_iter_get_line_readonly"
+     ponyname="pango_layout_iter_get_line_readonly"
+     fid="f342"
+     lineno="397"
+     rv="NullablePointer[PangoLayoutLine]">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9444" name="pango_layout_iter_at_last_line"
+     ponyname="pango_layout_iter_at_last_line"
+     fid="f342"
+     lineno="399"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9445" name="pango_layout_iter_get_layout"
+     ponyname="pango_layout_iter_get_layout"
+     fid="f342"
+     lineno="401"
+     rv="NullablePointer[PangoLayout]">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9446" name="pango_layout_iter_next_char"
+     ponyname="pango_layout_iter_next_char"
+     fid="f342"
+     lineno="404"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9447" name="pango_layout_iter_next_cluster"
+     ponyname="pango_layout_iter_next_cluster"
+     fid="f342"
+     lineno="406"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9448" name="pango_layout_iter_next_run"
+     ponyname="pango_layout_iter_next_run"
+     fid="f342"
+     lineno="408"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9449" name="pango_layout_iter_next_line"
+     ponyname="pango_layout_iter_next_line"
+     fid="f342"
+     lineno="410"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9450" name="pango_layout_iter_get_char_extents"
+     ponyname="pango_layout_iter_get_char_extents"
+     fid="f342"
+     lineno="413"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9451" name="pango_layout_iter_get_cluster_extents"
+     ponyname="pango_layout_iter_get_cluster_extents"
+     fid="f342"
+     lineno="416"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9452" name="pango_layout_iter_get_run_extents"
+     ponyname="pango_layout_iter_get_run_extents"
+     fid="f342"
+     lineno="420"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9453" name="pango_layout_iter_get_line_extents"
+     ponyname="pango_layout_iter_get_line_extents"
+     fid="f342"
+     lineno="424"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9454" name="pango_layout_iter_get_line_yrange"
+     ponyname="pango_layout_iter_get_line_yrange"
+     fid="f342"
+     lineno="431"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+       <usearg name="y0" type="Pointer[I32]"/>
+       <usearg name="y1" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9455" name="pango_layout_iter_get_layout_extents"
+     ponyname="pango_layout_iter_get_layout_extents"
+     fid="f342"
+     lineno="435"
+     rv="None">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+       <usearg name="inkrect" type="NullablePointer[PangoRectangle]"/>
+       <usearg name="logicalrect" type="NullablePointer[PangoRectangle]"/>
+     </useargs>
+  </use>
+  <use id="_9456" name="pango_layout_iter_get_baseline"
+     ponyname="pango_layout_iter_get_baseline"
+     fid="f342"
+     lineno="439"
+     rv="I32">
+     <useargs>
+       <usearg name="iter" type="NullablePointer[PangoLayoutIter]"/>
+     </useargs>
+  </use>
+  <use id="_9465" name="pango_renderer_get_type"
+     ponyname="pango_renderer_get_type"
+     fid="f343"
+     lineno="198"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9466" name="pango_renderer_draw_layout"
+     ponyname="pango_renderer_draw_layout"
+     fid="f343"
+     lineno="201"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+       <usearg name="x" type="I32"/>
+       <usearg name="y" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9467" name="pango_renderer_draw_layout_line"
+     ponyname="pango_renderer_draw_layout_line"
+     fid="f343"
+     lineno="206"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+       <usearg name="x" type="I32"/>
+       <usearg name="y" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9468" name="pango_renderer_draw_glyphs"
+     ponyname="pango_renderer_draw_glyphs"
+     fid="f343"
+     lineno="211"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+       <usearg name="x" type="I32"/>
+       <usearg name="y" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9469" name="pango_renderer_draw_glyph_item"
+     ponyname="pango_renderer_draw_glyph_item"
+     fid="f343"
+     lineno="217"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="glyphitem" type="NullablePointer[PangoGlyphItem]"/>
+       <usearg name="x" type="I32"/>
+       <usearg name="y" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9470" name="pango_renderer_draw_rectangle"
+     ponyname="pango_renderer_draw_rectangle"
+     fid="f343"
+     lineno="223"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="part" type="I32"/>
+       <usearg name="x" type="I32"/>
+       <usearg name="y" type="I32"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9471" name="pango_renderer_draw_error_underline"
+     ponyname="pango_renderer_draw_error_underline"
+     fid="f343"
+     lineno="230"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="x" type="I32"/>
+       <usearg name="y" type="I32"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9472" name="pango_renderer_draw_trapezoid"
+     ponyname="pango_renderer_draw_trapezoid"
+     fid="f343"
+     lineno="236"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="part" type="I32"/>
+       <usearg name="y1" type="F64"/>
+       <usearg name="x11" type="F64"/>
+       <usearg name="x21" type="F64"/>
+       <usearg name="y2" type="F64"/>
+       <usearg name="x12" type="F64"/>
+       <usearg name="x22" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_9473" name="pango_renderer_draw_glyph"
+     ponyname="pango_renderer_draw_glyph"
+     fid="f343"
+     lineno="245"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="glyph" type="U32"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_9474" name="pango_renderer_activate"
+     ponyname="pango_renderer_activate"
+     fid="f343"
+     lineno="252"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+     </useargs>
+  </use>
+  <use id="_9475" name="pango_renderer_deactivate"
+     ponyname="pango_renderer_deactivate"
+     fid="f343"
+     lineno="254"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+     </useargs>
+  </use>
+  <use id="_9476" name="pango_renderer_part_changed"
+     ponyname="pango_renderer_part_changed"
+     fid="f343"
+     lineno="257"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="part" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9477" name="pango_renderer_set_color"
+     ponyname="pango_renderer_set_color"
+     fid="f343"
+     lineno="261"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="part" type="I32"/>
+       <usearg name="color" type="NullablePointer[PangoColor]"/>
+     </useargs>
+  </use>
+  <use id="_9478" name="pango_renderer_get_color"
+     ponyname="pango_renderer_get_color"
+     fid="f343"
+     lineno="265"
+     rv="NullablePointer[PangoColor]">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="part" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9479" name="pango_renderer_set_alpha"
+     ponyname="pango_renderer_set_alpha"
+     fid="f343"
+     lineno="269"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="part" type="I32"/>
+       <usearg name="alpha" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_9480" name="pango_renderer_get_alpha"
+     ponyname="pango_renderer_get_alpha"
+     fid="f343"
+     lineno="273"
+     rv="U16">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="part" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9481" name="pango_renderer_set_matrix"
+     ponyname="pango_renderer_set_matrix"
+     fid="f343"
+     lineno="277"
+     rv="None">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+       <usearg name="matrix" type="NullablePointer[PangoMatrix]"/>
+     </useargs>
+  </use>
+  <use id="_9482" name="pango_renderer_get_matrix"
+     ponyname="pango_renderer_get_matrix"
+     fid="f343"
+     lineno="280"
+     rv="NullablePointer[PangoMatrix]">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+     </useargs>
+  </use>
+  <use id="_9483" name="pango_renderer_get_layout"
+     ponyname="pango_renderer_get_layout"
+     fid="f343"
+     lineno="283"
+     rv="NullablePointer[PangoLayout]">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+     </useargs>
+  </use>
+  <use id="_9484" name="pango_renderer_get_layout_line"
+     ponyname="pango_renderer_get_layout_line"
+     fid="f343"
+     lineno="285"
+     rv="NullablePointer[PangoLayoutLine]">
+     <useargs>
+       <usearg name="renderer" type="NullablePointer[PangoRenderer]"/>
+     </useargs>
+  </use>
+  <use id="_9586" name="pango_split_file_list"
+     ponyname="pango_split_file_list"
+     fid="f351"
+     lineno="32"
+     rv="NullablePointer[Pointer[U8]]">
+     <useargs>
+       <usearg name="str" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9587" name="pango_trim_string"
+     ponyname="pango_trim_string"
+     fid="f351"
+     lineno="35"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="str" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_9588" name="pango_read_line"
+     ponyname="pango_read_line"
+     fid="f351"
+     lineno="37"
+     rv="I32">
+     <useargs>
+       <usearg name="stream" type="NullablePointer[IOFILE]"/>
+       <usearg name="str" type="NullablePointer[GString]"/>
+     </useargs>
+  </use>
+  <use id="_9589" name="pango_skip_space"
+     ponyname="pango_skip_space"
+     fid="f351"
+     lineno="40"
+     rv="I32">
+     <useargs>
+       <usearg name="pos" type="NullablePointer[Pointer[U8]]"/>
+     </useargs>
+  </use>
+  <use id="_9590" name="pango_scan_word"
+     ponyname="pango_scan_word"
+     fid="f351"
+     lineno="42"
+     rv="I32">
+     <useargs>
+       <usearg name="pos" type="NullablePointer[Pointer[U8]]"/>
+       <usearg name="out" type="NullablePointer[GString]"/>
+     </useargs>
+  </use>
+  <use id="_9591" name="pango_scan_string"
+     ponyname="pango_scan_string"
+     fid="f351"
+     lineno="45"
+     rv="I32">
+     <useargs>
+       <usearg name="pos" type="NullablePointer[Pointer[U8]]"/>
+       <usearg name="out" type="NullablePointer[GString]"/>
+     </useargs>
+  </use>
+  <use id="_9592" name="pango_scan_int"
+     ponyname="pango_scan_int"
+     fid="f351"
+     lineno="48"
+     rv="I32">
+     <useargs>
+       <usearg name="pos" type="NullablePointer[Pointer[U8]]"/>
+       <usearg name="out" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9593" name="pango_parse_enum"
+     ponyname="pango_parse_enum"
+     fid="f351"
+     lineno="52"
+     rv="I32">
+     <useargs>
+       <usearg name="g_type" type="U64"/>
+       <usearg name="str" type="Pointer[U8]"/>
+       <usearg name="value" type="Pointer[I32]"/>
+       <usearg name="warn" type="I32"/>
+       <usearg name="possiblevalues" type="NullablePointer[Pointer[U8]]"/>
+     </useargs>
+  </use>
+  <use id="_9594" name="pango_parse_style"
+     ponyname="pango_parse_style"
+     fid="f351"
+     lineno="66"
+     rv="I32">
+     <useargs>
+       <usearg name="str" type="Pointer[U8]"/>
+       <usearg name="style" type="Pointer[I32]"/>
+       <usearg name="warn" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9595" name="pango_parse_variant"
+     ponyname="pango_parse_variant"
+     fid="f351"
+     lineno="70"
+     rv="I32">
+     <useargs>
+       <usearg name="str" type="Pointer[U8]"/>
+       <usearg name="variant" type="Pointer[I32]"/>
+       <usearg name="warn" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9596" name="pango_parse_weight"
+     ponyname="pango_parse_weight"
+     fid="f351"
+     lineno="74"
+     rv="I32">
+     <useargs>
+       <usearg name="str" type="Pointer[U8]"/>
+       <usearg name="weight" type="Pointer[I32]"/>
+       <usearg name="warn" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9597" name="pango_parse_stretch"
+     ponyname="pango_parse_stretch"
+     fid="f351"
+     lineno="78"
+     rv="I32">
+     <useargs>
+       <usearg name="str" type="Pointer[U8]"/>
+       <usearg name="stretch" type="Pointer[I32]"/>
+       <usearg name="warn" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9598" name="pango_quantize_line_geometry"
+     ponyname="pango_quantize_line_geometry"
+     fid="f351"
+     lineno="86"
+     rv="None">
+     <useargs>
+       <usearg name="thickness" type="Pointer[I32]"/>
+       <usearg name="position" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9599" name="pango_log2vis_get_embedding_levels"
+     ponyname="pango_log2vis_get_embedding_levels"
+     fid="f351"
+     lineno="92"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="length" type="I32"/>
+       <usearg name="pbasedir" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_9600" name="pango_is_zero_width"
+     ponyname="pango_is_zero_width"
+     fid="f351"
+     lineno="100"
+     rv="I32">
+     <useargs>
+       <usearg name="ch" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_9601" name="pango_version"
+     ponyname="pango_version"
+     fid="f351"
+     lineno="167"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_9602" name="pango_version_string"
+     ponyname="pango_version_string"
+     fid="f351"
+     lineno="171"
+     rv="Pointer[U8]">
+     <useargs/>
+  </use>
+  <use id="_9603" name="pango_version_check"
+     ponyname="pango_version_check"
+     fid="f351"
+     lineno="175"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="requiredmajor" type="I32"/>
+       <usearg name="requiredminor" type="I32"/>
+       <usearg name="requiredmicro" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9897" name="pango_cairo_font_map_get_type"
+     ponyname="pango_cairo_font_map_get_type"
+     fid="f368"
+     lineno="103"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9898" name="pango_cairo_font_map_new"
+     ponyname="pango_cairo_font_map_new"
+     fid="f368"
+     lineno="106"
+     rv="NullablePointer[PangoFontMap]">
+     <useargs/>
+  </use>
+  <use id="_9899" name="pango_cairo_font_map_new_for_font_type"
+     ponyname="pango_cairo_font_map_new_for_font_type"
+     fid="f368"
+     lineno="108"
+     rv="NullablePointer[PangoFontMap]">
+     <useargs>
+       <usearg name="fonttype" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_9900" name="pango_cairo_font_map_get_default"
+     ponyname="pango_cairo_font_map_get_default"
+     fid="f368"
+     lineno="110"
+     rv="NullablePointer[PangoFontMap]">
+     <useargs/>
+  </use>
+  <use id="_9901" name="pango_cairo_font_map_set_default"
+     ponyname="pango_cairo_font_map_set_default"
+     fid="f368"
+     lineno="112"
+     rv="None">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoCairoFontMap]"/>
+     </useargs>
+  </use>
+  <use id="_9902" name="pango_cairo_font_map_get_font_type"
+     ponyname="pango_cairo_font_map_get_font_type"
+     fid="f368"
+     lineno="114"
+     rv="I32">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoCairoFontMap]"/>
+     </useargs>
+  </use>
+  <use id="_9903" name="pango_cairo_font_map_set_resolution"
+     ponyname="pango_cairo_font_map_set_resolution"
+     fid="f368"
+     lineno="117"
+     rv="None">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoCairoFontMap]"/>
+       <usearg name="dpi" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_9904" name="pango_cairo_font_map_get_resolution"
+     ponyname="pango_cairo_font_map_get_resolution"
+     fid="f368"
+     lineno="120"
+     rv="F64">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoCairoFontMap]"/>
+     </useargs>
+  </use>
+  <use id="_9905" name="pango_cairo_font_map_create_context"
+     ponyname="pango_cairo_font_map_create_context"
+     fid="f368"
+     lineno="123"
+     rv="NullablePointer[PangoContext]">
+     <useargs>
+       <usearg name="fontmap" type="NullablePointer[PangoCairoFontMap]"/>
+     </useargs>
+  </use>
+  <use id="_9906" name="pango_cairo_font_get_type"
+     ponyname="pango_cairo_font_get_type"
+     fid="f368"
+     lineno="130"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_9907" name="pango_cairo_font_get_scaled_font"
+     ponyname="pango_cairo_font_get_scaled_font"
+     fid="f368"
+     lineno="133"
+     rv="NullablePointer[Cairoscaledfont]">
+     <useargs>
+       <usearg name="font" type="NullablePointer[PangoCairoFont]"/>
+     </useargs>
+  </use>
+  <use id="_9908" name="pango_cairo_update_context"
+     ponyname="pango_cairo_update_context"
+     fid="f368"
+     lineno="138"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9909" name="pango_cairo_context_set_font_options"
+     ponyname="pango_cairo_context_set_font_options"
+     fid="f368"
+     lineno="142"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_9910" name="pango_cairo_context_get_font_options"
+     ponyname="pango_cairo_context_get_font_options"
+     fid="f368"
+     lineno="145"
+     rv="NullablePointer[Cairofontoptions]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9911" name="pango_cairo_context_set_resolution"
+     ponyname="pango_cairo_context_set_resolution"
+     fid="f368"
+     lineno="148"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="dpi" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_9912" name="pango_cairo_context_get_resolution"
+     ponyname="pango_cairo_context_get_resolution"
+     fid="f368"
+     lineno="151"
+     rv="F64">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+     </useargs>
+  </use>
+  <use id="_9913" name="pango_cairo_context_set_shape_renderer"
+     ponyname="pango_cairo_context_set_shape_renderer"
+     fid="f368"
+     lineno="154"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+       <usearg name="dnotify" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_9914" name="pango_cairo_context_get_shape_renderer"
+     ponyname="pango_cairo_context_get_shape_renderer"
+     fid="f368"
+     lineno="159"
+     rv="NullablePointer[FUNCTIONTYPE]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[PangoContext]"/>
+       <usearg name="data" type="NullablePointer[Pointer[None]]"/>
+     </useargs>
+  </use>
+  <use id="_9915" name="pango_cairo_create_context"
+     ponyname="pango_cairo_create_context"
+     fid="f368"
+     lineno="165"
+     rv="NullablePointer[PangoContext]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_9916" name="pango_cairo_create_layout"
+     ponyname="pango_cairo_create_layout"
+     fid="f368"
+     lineno="167"
+     rv="NullablePointer[PangoLayout]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_9917" name="pango_cairo_update_layout"
+     ponyname="pango_cairo_update_layout"
+     fid="f368"
+     lineno="169"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9918" name="pango_cairo_show_glyph_string"
+     ponyname="pango_cairo_show_glyph_string"
+     fid="f368"
+     lineno="176"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+     </useargs>
+  </use>
+  <use id="_9919" name="pango_cairo_show_glyph_item"
+     ponyname="pango_cairo_show_glyph_item"
+     fid="f368"
+     lineno="180"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="text" type="Pointer[U8]"/>
+       <usearg name="glyphitem" type="NullablePointer[PangoGlyphItem]"/>
+     </useargs>
+  </use>
+  <use id="_9920" name="pango_cairo_show_layout_line"
+     ponyname="pango_cairo_show_layout_line"
+     fid="f368"
+     lineno="184"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+     </useargs>
+  </use>
+  <use id="_9921" name="pango_cairo_show_layout"
+     ponyname="pango_cairo_show_layout"
+     fid="f368"
+     lineno="187"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9922" name="pango_cairo_show_error_underline"
+     ponyname="pango_cairo_show_error_underline"
+     fid="f368"
+     lineno="191"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+       <usearg name="width" type="F64"/>
+       <usearg name="height" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_9923" name="pango_cairo_glyph_string_path"
+     ponyname="pango_cairo_glyph_string_path"
+     fid="f368"
+     lineno="201"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="font" type="NullablePointer[PangoFont]"/>
+       <usearg name="glyphs" type="NullablePointer[PangoGlyphString]"/>
+     </useargs>
+  </use>
+  <use id="_9924" name="pango_cairo_layout_line_path"
+     ponyname="pango_cairo_layout_line_path"
+     fid="f368"
+     lineno="205"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="line" type="NullablePointer[PangoLayoutLine]"/>
+     </useargs>
+  </use>
+  <use id="_9925" name="pango_cairo_layout_path"
+     ponyname="pango_cairo_layout_path"
+     fid="f368"
+     lineno="208"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="layout" type="NullablePointer[PangoLayout]"/>
+     </useargs>
+  </use>
+  <use id="_9926" name="pango_cairo_error_underline_path"
+     ponyname="pango_cairo_error_underline_path"
+     fid="f368"
+     lineno="212"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+       <usearg name="width" type="F64"/>
+       <usearg name="height" type="F64"/>
+     </useargs>
+  </use></uses>
+</castxml2pony>
+

@@ -1,0 +1,678 @@
+<typedefs>
+  <typedef name="String"
+    ponytypein="String"
+    ponytypeinconv=".cstring()"
+    ponytypeout="String"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    rvtype="Pointer[U8]">
+    <ponytypeconvout>
+      <prefixs>
+        <prefix>var pcstring: Pointer[U8] = </prefix>
+      </prefixs>
+      <suffixes>
+        <suffix>let p: String iso = String.from_cstring(pcstring).clone()</suffix>
+        <suffix>consume p</suffix>
+      </suffixes>
+    </ponytypeconvout>
+  </typedef>
+
+  <typedef name="Array[String]"
+    ponytypein="Array[String]"
+    ponytypeinconv=""
+    ponytypeout="Pointer[Pointer[U8]]"
+    structtype="Pointer[Pointer[U8]]"
+    structdef="Pointer[Pointer[U8]]"
+    argtype="Pointer[Pointer[U8]] tag"
+    rvtype="Pointer[Pointer[U8]]"/>
+
+  <typedef name="NullablePointer[PangoFont]"
+    ponytypein="NullablePointer[PangoFont] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoFont]"
+    structtype="NullablePointer[PangoFont]"
+    structdef="NullablePointer[PangoFont].none()"
+    argtype="NullablePointer[PangoFont] tag"
+    rvtype="NullablePointer[PangoFont]"/>
+
+  <typedef name="NullablePointer[PangoEngineShape]"
+    ponytypein="NullablePointer[PangoEngineShape] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoEngineShape]"
+    structtype="NullablePointer[PangoEngineShape]"
+    structdef="NullablePointer[PangoEngineShape].none()"
+    argtype="NullablePointer[PangoEngineShape] tag"
+    rvtype="NullablePointer[PangoEngineShape]"/>
+
+  <typedef name="NullablePointer[GTypeModule]"
+    ponytypein="NullablePointer[GTypeModule] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GTypeModule]"
+    structtype="NullablePointer[GTypeModule]"
+    structdef="NullablePointer[GTypeModule].none()"
+    argtype="NullablePointer[GTypeModule] tag"
+    rvtype="NullablePointer[GTypeModule]"/>
+
+  <typedef name="NullablePointer[PangoMatrix]"
+    ponytypein="NullablePointer[PangoMatrix] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoMatrix]"
+    structtype="NullablePointer[PangoMatrix]"
+    structdef="NullablePointer[PangoMatrix].none()"
+    argtype="NullablePointer[PangoMatrix] tag"
+    rvtype="NullablePointer[PangoMatrix]"/>
+
+  <typedef name="NullablePointer[PangoLanguage]"
+    ponytypein="NullablePointer[PangoLanguage] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoLanguage]"
+    structtype="NullablePointer[PangoLanguage]"
+    structdef="NullablePointer[PangoLanguage].none()"
+    argtype="NullablePointer[PangoLanguage] tag"
+    rvtype="NullablePointer[PangoLanguage]"/>
+
+  <typedef name="U32"
+    ponytypein="U32"
+    ponytypeinconv=""
+    ponytypeout="U32"
+    structtype="U32"
+    structdef="U32(0)"
+    argtype="U32"
+    rvtype="U32"/>
+
+  <typedef name="NullablePointer[PangoItem]"
+    ponytypein="NullablePointer[PangoItem] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoItem]"
+    structtype="NullablePointer[PangoItem]"
+    structdef="NullablePointer[PangoItem].none()"
+    argtype="NullablePointer[PangoItem] tag"
+    rvtype="NullablePointer[PangoItem]"/>
+
+  <typedef name="NullablePointer[PangoAttrClass]"
+    ponytypein="NullablePointer[PangoAttrClass] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoAttrClass]"
+    structtype="NullablePointer[PangoAttrClass]"
+    structdef="NullablePointer[PangoAttrClass].none()"
+    argtype="NullablePointer[PangoAttrClass] tag"
+    rvtype="NullablePointer[PangoAttrClass]"/>
+
+  <typedef name="NullablePointer[NullablePointer[PangoFontDescription]]"
+    ponytypein="NullablePointer[NullablePointer[PangoFontDescription]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[NullablePointer[PangoFontDescription]]"
+    structtype="NullablePointer[NullablePointer[PangoFontDescription]]"
+    structdef="NullablePointer[NullablePointer[PangoFontDescription]].none()"
+    argtype="NullablePointer[NullablePointer[PangoFontDescription]] tag"
+    rvtype="NullablePointer[NullablePointer[PangoFontDescription]]"/>
+
+  <typedef name="NullablePointer[NullablePointer[NullablePointer[PangoFontFamily]]]"
+    ponytypein="NullablePointer[NullablePointer[NullablePointer[PangoFontFamily]]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[NullablePointer[NullablePointer[PangoFontFamily]]]"
+    structtype="NullablePointer[NullablePointer[NullablePointer[PangoFontFamily]]]"
+    structdef="NullablePointer[NullablePointer[NullablePointer[PangoFontFamily]]].none()"
+    argtype="NullablePointer[NullablePointer[NullablePointer[PangoFontFamily]]] tag"
+    rvtype="NullablePointer[NullablePointer[NullablePointer[PangoFontFamily]]]"/>
+
+  <typedef name="NullablePointer[PangoColor]"
+    ponytypein="NullablePointer[PangoColor] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoColor]"
+    structtype="NullablePointer[PangoColor]"
+    structdef="NullablePointer[PangoColor].none()"
+    argtype="NullablePointer[PangoColor] tag"
+    rvtype="NullablePointer[PangoColor]"/>
+
+  <typedef name="NullablePointer[GList]"
+    ponytypein="NullablePointer[GList] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GList]"
+    structtype="NullablePointer[GList]"
+    structdef="NullablePointer[GList].none()"
+    argtype="NullablePointer[GList] tag"
+    rvtype="NullablePointer[GList]"/>
+
+  <typedef name="..."
+    ponytypein="... tag"
+    ponytypeinconv=""
+    ponytypeout="..."
+    structtype="..."
+    structdef="..."
+    argtype="... tag"
+    rvtype="..."/>
+
+  <typedef name="NullablePointer[PangoGlyphString]"
+    ponytypein="NullablePointer[PangoGlyphString] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoGlyphString]"
+    structtype="NullablePointer[PangoGlyphString]"
+    structdef="NullablePointer[PangoGlyphString].none()"
+    argtype="NullablePointer[PangoGlyphString] tag"
+    rvtype="NullablePointer[PangoGlyphString]"/>
+
+  <typedef name="NullablePointer[FUNCTIONTYPE]"
+    ponytypein="Pointer[None] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[None]"
+    structtype="Pointer[None]"
+    structdef="Pointer[None].none()"
+    argtype="Pointer[None] tag"
+    rvtype="Pointer[None]"/>
+
+  <typedef name="NullablePointer[PangoFontsetSimple]"
+    ponytypein="NullablePointer[PangoFontsetSimple] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoFontsetSimple]"
+    structtype="NullablePointer[PangoFontsetSimple]"
+    structdef="NullablePointer[PangoFontsetSimple].none()"
+    argtype="NullablePointer[PangoFontsetSimple] tag"
+    rvtype="NullablePointer[PangoFontsetSimple]"/>
+
+  <typedef name="NullablePointer[PangoFontFace]"
+    ponytypein="NullablePointer[PangoFontFace] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoFontFace]"
+    structtype="NullablePointer[PangoFontFace]"
+    structdef="NullablePointer[PangoFontFace].none()"
+    argtype="NullablePointer[PangoFontFace] tag"
+    rvtype="NullablePointer[PangoFontFace]"/>
+
+  <typedef name="NullablePointer[PangoEngine]"
+    ponytypein="NullablePointer[PangoEngine] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoEngine]"
+    structtype="NullablePointer[PangoEngine]"
+    structdef="NullablePointer[PangoEngine].none()"
+    argtype="NullablePointer[PangoEngine] tag"
+    rvtype="NullablePointer[PangoEngine]"/>
+
+  <typedef name="NullablePointer[PangoContext]"
+    ponytypein="NullablePointer[PangoContext] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoContext]"
+    structtype="NullablePointer[PangoContext]"
+    structdef="NullablePointer[PangoContext].none()"
+    argtype="NullablePointer[PangoContext] tag"
+    rvtype="NullablePointer[PangoContext]"/>
+
+  <typedef name="NullablePointer[GMarkupParseContext]"
+    ponytypein="NullablePointer[GMarkupParseContext] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GMarkupParseContext]"
+    structtype="NullablePointer[GMarkupParseContext]"
+    structdef="NullablePointer[GMarkupParseContext].none()"
+    argtype="NullablePointer[GMarkupParseContext] tag"
+    rvtype="NullablePointer[GMarkupParseContext]"/>
+
+  <typedef name="NullablePointer[PangoTabArray]"
+    ponytypein="NullablePointer[PangoTabArray] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoTabArray]"
+    structtype="NullablePointer[PangoTabArray]"
+    structdef="NullablePointer[PangoTabArray].none()"
+    argtype="NullablePointer[PangoTabArray] tag"
+    rvtype="NullablePointer[PangoTabArray]"/>
+
+  <typedef name="NullablePointer[PangoCoverage]"
+    ponytypein="NullablePointer[PangoCoverage] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoCoverage]"
+    structtype="NullablePointer[PangoCoverage]"
+    structdef="NullablePointer[PangoCoverage].none()"
+    argtype="NullablePointer[PangoCoverage] tag"
+    rvtype="NullablePointer[PangoCoverage]"/>
+
+  <typedef name="NullablePointer[PangoFontFamily]"
+    ponytypein="NullablePointer[PangoFontFamily] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoFontFamily]"
+    structtype="NullablePointer[PangoFontFamily]"
+    structdef="NullablePointer[PangoFontFamily].none()"
+    argtype="NullablePointer[PangoFontFamily] tag"
+    rvtype="NullablePointer[PangoFontFamily]"/>
+
+  <typedef name="NullablePointer[Hbfeaturet]"
+    ponytypein="NullablePointer[Hbfeaturet] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Hbfeaturet]"
+    structtype="NullablePointer[Hbfeaturet]"
+    structdef="NullablePointer[Hbfeaturet].none()"
+    argtype="NullablePointer[Hbfeaturet] tag"
+    rvtype="NullablePointer[Hbfeaturet]"/>
+
+  <typedef name="Pointer[U8]"
+    ponytypein="Pointer[U8] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U8]"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    rvtype="Pointer[U8]"/>
+
+  <typedef name="NullablePointer[Pointer[U8]]"
+    ponytypein="NullablePointer[Pointer[U8]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Pointer[U8]]"
+    structtype="NullablePointer[Pointer[U8]]"
+    structdef="NullablePointer[Pointer[U8]].none()"
+    argtype="NullablePointer[Pointer[U8]] tag"
+    rvtype="NullablePointer[Pointer[U8]]"/>
+
+  <typedef name="F64"
+    ponytypein="F64"
+    ponytypeinconv=""
+    ponytypeout="F64"
+    structtype="F64"
+    structdef="F64(0)"
+    argtype="F64"
+    rvtype="F64"/>
+
+  <typedef name="NullablePointer[NullablePointer[NullablePointer[PangoFontFace]]]"
+    ponytypein="NullablePointer[NullablePointer[NullablePointer[PangoFontFace]]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[NullablePointer[NullablePointer[PangoFontFace]]]"
+    structtype="NullablePointer[NullablePointer[NullablePointer[PangoFontFace]]]"
+    structdef="NullablePointer[NullablePointer[NullablePointer[PangoFontFace]]].none()"
+    argtype="NullablePointer[NullablePointer[NullablePointer[PangoFontFace]]] tag"
+    rvtype="NullablePointer[NullablePointer[NullablePointer[PangoFontFace]]]"/>
+
+  <typedef name="NullablePointer[NullablePointer[PangoEngineInfo]]"
+    ponytypein="NullablePointer[NullablePointer[PangoEngineInfo]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[NullablePointer[PangoEngineInfo]]"
+    structtype="NullablePointer[NullablePointer[PangoEngineInfo]]"
+    structdef="NullablePointer[NullablePointer[PangoEngineInfo]].none()"
+    argtype="NullablePointer[NullablePointer[PangoEngineInfo]] tag"
+    rvtype="NullablePointer[NullablePointer[PangoEngineInfo]]"/>
+
+  <typedef name="NullablePointer[NullablePointer[GError]]"
+    ponytypein="NullablePointer[NullablePointer[GError]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[NullablePointer[GError]]"
+    structtype="NullablePointer[NullablePointer[GError]]"
+    structdef="NullablePointer[NullablePointer[GError]].none()"
+    argtype="NullablePointer[NullablePointer[GError]] tag"
+    rvtype="NullablePointer[NullablePointer[GError]]"/>
+
+  <typedef name="I32"
+    ponytypein="I32"
+    ponytypeinconv=""
+    ponytypeout="I32"
+    structtype="I32"
+    structdef="I32(0)"
+    argtype="I32"
+    rvtype="I32"/>
+
+  <typedef name="NullablePointer[PangoLayoutIter]"
+    ponytypein="NullablePointer[PangoLayoutIter] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoLayoutIter]"
+    structtype="NullablePointer[PangoLayoutIter]"
+    structdef="NullablePointer[PangoLayoutIter].none()"
+    argtype="NullablePointer[PangoLayoutIter] tag"
+    rvtype="NullablePointer[PangoLayoutIter]"/>
+
+  <typedef name="Pointer[U32]"
+    ponytypein="Pointer[U32] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U32]"
+    structtype="Pointer[U32]"
+    structdef="Pointer[U32]"
+    argtype="Pointer[U32] tag"
+    rvtype="Pointer[U32]"/>
+
+  <typedef name="Pointer[None]"
+    ponytypein="Pointer[None] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[None]"
+    structtype="Pointer[None]"
+    structdef="Pointer[None]"
+    argtype="Pointer[None] tag"
+    rvtype="Pointer[None]"/>
+
+  <typedef name="NullablePointer[PangoRectangle]"
+    ponytypein="NullablePointer[PangoRectangle] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoRectangle]"
+    structtype="NullablePointer[PangoRectangle]"
+    structdef="NullablePointer[PangoRectangle].none()"
+    argtype="NullablePointer[PangoRectangle] tag"
+    rvtype="NullablePointer[PangoRectangle]"/>
+
+  <typedef name="NullablePointer[NullablePointer[PangoLanguage]]"
+    ponytypein="NullablePointer[NullablePointer[PangoLanguage]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[NullablePointer[PangoLanguage]]"
+    structtype="NullablePointer[NullablePointer[PangoLanguage]]"
+    structdef="NullablePointer[NullablePointer[PangoLanguage]].none()"
+    argtype="NullablePointer[NullablePointer[PangoLanguage]] tag"
+    rvtype="NullablePointer[NullablePointer[PangoLanguage]]"/>
+
+  <typedef name="NullablePointer[PangoFontset]"
+    ponytypein="NullablePointer[PangoFontset] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoFontset]"
+    structtype="NullablePointer[PangoFontset]"
+    structdef="NullablePointer[PangoFontset].none()"
+    argtype="NullablePointer[PangoFontset] tag"
+    rvtype="NullablePointer[PangoFontset]"/>
+
+  <typedef name="NullablePointer[Pointer[None]]"
+    ponytypein="NullablePointer[Pointer[None]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Pointer[None]]"
+    structtype="NullablePointer[Pointer[None]]"
+    structdef="NullablePointer[Pointer[None]].none()"
+    argtype="NullablePointer[Pointer[None]] tag"
+    rvtype="NullablePointer[Pointer[None]]"/>
+
+  <typedef name="U64"
+    ponytypein="U64"
+    ponytypeinconv=""
+    ponytypeout="U64"
+    structtype="U64"
+    structdef="U64(0)"
+    argtype="U64"
+    rvtype="U64"/>
+
+  <typedef name="NullablePointer[IOFILE]"
+    ponytypein="NullablePointer[IOFILE] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[IOFILE]"
+    structtype="NullablePointer[IOFILE]"
+    structdef="NullablePointer[IOFILE].none()"
+    argtype="NullablePointer[IOFILE] tag"
+    rvtype="NullablePointer[IOFILE]"/>
+
+  <typedef name="NullablePointer[PangoAttrList]"
+    ponytypein="NullablePointer[PangoAttrList] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoAttrList]"
+    structtype="NullablePointer[PangoAttrList]"
+    structdef="NullablePointer[PangoAttrList].none()"
+    argtype="NullablePointer[PangoAttrList] tag"
+    rvtype="NullablePointer[PangoAttrList]"/>
+
+  <typedef name="NullablePointer[PangoAttrIterator]"
+    ponytypein="NullablePointer[PangoAttrIterator] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoAttrIterator]"
+    structtype="NullablePointer[PangoAttrIterator]"
+    structdef="NullablePointer[PangoAttrIterator].none()"
+    argtype="NullablePointer[PangoAttrIterator] tag"
+    rvtype="NullablePointer[PangoAttrIterator]"/>
+
+  <typedef name="NullablePointer[PangoGlyphItemIter]"
+    ponytypein="NullablePointer[PangoGlyphItemIter] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoGlyphItemIter]"
+    structtype="NullablePointer[PangoGlyphItemIter]"
+    structdef="NullablePointer[PangoGlyphItemIter].none()"
+    argtype="NullablePointer[PangoGlyphItemIter] tag"
+    rvtype="NullablePointer[PangoGlyphItemIter]"/>
+
+  <typedef name="NullablePointer[PangoFontMap]"
+    ponytypein="NullablePointer[PangoFontMap] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoFontMap]"
+    structtype="NullablePointer[PangoFontMap]"
+    structdef="NullablePointer[PangoFontMap].none()"
+    argtype="NullablePointer[PangoFontMap] tag"
+    rvtype="NullablePointer[PangoFontMap]"/>
+
+  <typedef name="Pointer[I32]"
+    ponytypein="Pointer[I32] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[I32]"
+    structtype="Pointer[I32]"
+    structdef="Pointer[I32]"
+    argtype="Pointer[I32] tag"
+    rvtype="Pointer[I32]"/>
+
+  <typedef name="NullablePointer[PangoAnalysis]"
+    ponytypein="NullablePointer[PangoAnalysis] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoAnalysis]"
+    structtype="NullablePointer[PangoAnalysis]"
+    structdef="NullablePointer[PangoAnalysis].none()"
+    argtype="NullablePointer[PangoAnalysis] tag"
+    rvtype="NullablePointer[PangoAnalysis]"/>
+
+  <typedef name="U16"
+    ponytypein="U16"
+    ponytypeinconv=""
+    ponytypeout="U16"
+    structtype="U16"
+    structdef="U16(0)"
+    argtype="U16"
+    rvtype="U16"/>
+
+  <typedef name="NullablePointer[NullablePointer[PangoLogAttr]]"
+    ponytypein="NullablePointer[NullablePointer[PangoLogAttr]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[NullablePointer[PangoLogAttr]]"
+    structtype="NullablePointer[NullablePointer[PangoLogAttr]]"
+    structdef="NullablePointer[NullablePointer[PangoLogAttr]].none()"
+    argtype="NullablePointer[NullablePointer[PangoLogAttr]] tag"
+    rvtype="NullablePointer[NullablePointer[PangoLogAttr]]"/>
+
+  <typedef name="NullablePointer[Hbfontt]"
+    ponytypein="NullablePointer[Hbfontt] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Hbfontt]"
+    structtype="NullablePointer[Hbfontt]"
+    structdef="NullablePointer[Hbfontt].none()"
+    argtype="NullablePointer[Hbfontt] tag"
+    rvtype="NullablePointer[Hbfontt]"/>
+
+  <typedef name="None"
+    ponytypein="None tag"
+    ponytypeinconv=""
+    ponytypeout="None"
+    structtype="None"
+    structdef="None"
+    argtype="None tag"
+    rvtype="None"/>
+
+  <typedef name="NullablePointer[PangoCairoFont]"
+    ponytypein="NullablePointer[PangoCairoFont] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoCairoFont]"
+    structtype="NullablePointer[PangoCairoFont]"
+    structdef="NullablePointer[PangoCairoFont].none()"
+    argtype="NullablePointer[PangoCairoFont] tag"
+    rvtype="NullablePointer[PangoCairoFont]"/>
+
+  <typedef name="F32"
+    ponytypein="F32"
+    ponytypeinconv=""
+    ponytypeout="F32"
+    structtype="F32"
+    structdef="F32(0)"
+    argtype="F32"
+    rvtype="F32"/>
+
+  <typedef name="NullablePointer[PangoLogAttr]"
+    ponytypein="NullablePointer[PangoLogAttr] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoLogAttr]"
+    structtype="NullablePointer[PangoLogAttr]"
+    structdef="NullablePointer[PangoLogAttr].none()"
+    argtype="NullablePointer[PangoLogAttr] tag"
+    rvtype="NullablePointer[PangoLogAttr]"/>
+
+  <typedef name="NullablePointer[PangoScriptIter]"
+    ponytypein="NullablePointer[PangoScriptIter] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoScriptIter]"
+    structtype="NullablePointer[PangoScriptIter]"
+    structdef="NullablePointer[PangoScriptIter].none()"
+    argtype="NullablePointer[PangoScriptIter] tag"
+    rvtype="NullablePointer[PangoScriptIter]"/>
+
+  <typedef name="NullablePointer[PangoRenderer]"
+    ponytypein="NullablePointer[PangoRenderer] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoRenderer]"
+    structtype="NullablePointer[PangoRenderer]"
+    structdef="NullablePointer[PangoRenderer].none()"
+    argtype="NullablePointer[PangoRenderer] tag"
+    rvtype="NullablePointer[PangoRenderer]"/>
+
+  <typedef name="NullablePointer[PangoFontDescription]"
+    ponytypein="NullablePointer[PangoFontDescription] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoFontDescription]"
+    structtype="NullablePointer[PangoFontDescription]"
+    structdef="NullablePointer[PangoFontDescription].none()"
+    argtype="NullablePointer[PangoFontDescription] tag"
+    rvtype="NullablePointer[PangoFontDescription]"/>
+
+  <typedef name="Pointer[F64]"
+    ponytypein="Pointer[F64] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[F64]"
+    structtype="Pointer[F64]"
+    structdef="Pointer[F64]"
+    argtype="Pointer[F64] tag"
+    rvtype="Pointer[F64]"/>
+
+  <typedef name="Pointer[U16]"
+    ponytypein="Pointer[U16] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U16]"
+    structtype="Pointer[U16]"
+    structdef="Pointer[U16]"
+    argtype="Pointer[U16] tag"
+    rvtype="Pointer[U16]"/>
+
+  <typedef name="NullablePointer[GSList]"
+    ponytypein="NullablePointer[GSList] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GSList]"
+    structtype="NullablePointer[GSList]"
+    structdef="NullablePointer[GSList].none()"
+    argtype="NullablePointer[GSList] tag"
+    rvtype="NullablePointer[GSList]"/>
+
+  <typedef name="NullablePointer[GString]"
+    ponytypein="NullablePointer[GString] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GString]"
+    structtype="NullablePointer[GString]"
+    structdef="NullablePointer[GString].none()"
+    argtype="NullablePointer[GString] tag"
+    rvtype="NullablePointer[GString]"/>
+
+  <typedef name="NullablePointer[PangoLayoutLine]"
+    ponytypein="NullablePointer[PangoLayoutLine] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoLayoutLine]"
+    structtype="NullablePointer[PangoLayoutLine]"
+    structdef="NullablePointer[PangoLayoutLine].none()"
+    argtype="NullablePointer[PangoLayoutLine] tag"
+    rvtype="NullablePointer[PangoLayoutLine]"/>
+
+  <typedef name="NullablePointer[PangoCairoFontMap]"
+    ponytypein="NullablePointer[PangoCairoFontMap] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoCairoFontMap]"
+    structtype="NullablePointer[PangoCairoFontMap]"
+    structdef="NullablePointer[PangoCairoFontMap].none()"
+    argtype="NullablePointer[PangoCairoFontMap] tag"
+    rvtype="NullablePointer[PangoCairoFontMap]"/>
+
+  <typedef name="NullablePointer[Cairo]"
+    ponytypein="NullablePointer[Cairo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Cairo]"
+    structtype="NullablePointer[Cairo]"
+    structdef="NullablePointer[Cairo].none()"
+    argtype="NullablePointer[Cairo] tag"
+    rvtype="NullablePointer[Cairo]"/>
+
+  <typedef name="NullablePointer[NullablePointer[PangoAttrList]]"
+    ponytypein="NullablePointer[NullablePointer[PangoAttrList]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[NullablePointer[PangoAttrList]]"
+    structtype="NullablePointer[NullablePointer[PangoAttrList]]"
+    structdef="NullablePointer[NullablePointer[PangoAttrList]].none()"
+    argtype="NullablePointer[NullablePointer[PangoAttrList]] tag"
+    rvtype="NullablePointer[NullablePointer[PangoAttrList]]"/>
+
+  <typedef name="NullablePointer[PangoGlyphItem]"
+    ponytypein="NullablePointer[PangoGlyphItem] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoGlyphItem]"
+    structtype="NullablePointer[PangoGlyphItem]"
+    structdef="NullablePointer[PangoGlyphItem].none()"
+    argtype="NullablePointer[PangoGlyphItem] tag"
+    rvtype="NullablePointer[PangoGlyphItem]"/>
+
+  <typedef name="NullablePointer[PangoFontMetrics]"
+    ponytypein="NullablePointer[PangoFontMetrics] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoFontMetrics]"
+    structtype="NullablePointer[PangoFontMetrics]"
+    structdef="NullablePointer[PangoFontMetrics].none()"
+    argtype="NullablePointer[PangoFontMetrics] tag"
+    rvtype="NullablePointer[PangoFontMetrics]"/>
+
+  <typedef name="NullablePointer[PangoAttribute]"
+    ponytypein="NullablePointer[PangoAttribute] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoAttribute]"
+    structtype="NullablePointer[PangoAttribute]"
+    structdef="NullablePointer[PangoAttribute].none()"
+    argtype="NullablePointer[PangoAttribute] tag"
+    rvtype="NullablePointer[PangoAttribute]"/>
+
+  <typedef name="NullablePointer[Pointer[I32]]"
+    ponytypein="NullablePointer[Pointer[I32]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Pointer[I32]]"
+    structtype="NullablePointer[Pointer[I32]]"
+    structdef="NullablePointer[Pointer[I32]].none()"
+    argtype="NullablePointer[Pointer[I32]] tag"
+    rvtype="NullablePointer[Pointer[I32]]"/>
+
+  <typedef name="NullablePointer[NullablePointer[GSList]]"
+    ponytypein="NullablePointer[NullablePointer[GSList]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[NullablePointer[GSList]]"
+    structtype="NullablePointer[NullablePointer[GSList]]"
+    structdef="NullablePointer[NullablePointer[GSList]].none()"
+    argtype="NullablePointer[NullablePointer[GSList]] tag"
+    rvtype="NullablePointer[NullablePointer[GSList]]"/>
+
+  <typedef name="NullablePointer[PangoLayout]"
+    ponytypein="NullablePointer[PangoLayout] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoLayout]"
+    structtype="NullablePointer[PangoLayout]"
+    structdef="NullablePointer[PangoLayout].none()"
+    argtype="NullablePointer[PangoLayout] tag"
+    rvtype="NullablePointer[PangoLayout]"/>
+
+  <typedef name="NullablePointer[Cairoscaledfont]"
+    ponytypein="NullablePointer[Cairoscaledfont] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Cairoscaledfont]"
+    structtype="NullablePointer[Cairoscaledfont]"
+    structdef="NullablePointer[Cairoscaledfont].none()"
+    argtype="NullablePointer[Cairoscaledfont] tag"
+    rvtype="NullablePointer[Cairoscaledfont]"/>
+
+  <typedef name="NullablePointer[Cairofontoptions]"
+    ponytypein="NullablePointer[Cairofontoptions] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Cairofontoptions]"
+    structtype="NullablePointer[Cairofontoptions]"
+    structdef="NullablePointer[Cairofontoptions].none()"
+    argtype="NullablePointer[Cairofontoptions] tag"
+    rvtype="NullablePointer[Cairofontoptions]"/>
+</typedefs>
+
